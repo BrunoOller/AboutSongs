@@ -6,8 +6,7 @@
     --cor-04-f3: #222222;
     --cor-t-lvl-01: #FBFDFF;
     --cor-t-lvl-02: #cecece;
-    --fade-b: rgba(0, 0, 0, 0.2);
-    --degrade-b-img: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0, 0.7));
+    --cor-fundo: linear-gradient(#1C1E1F, #051119);
 }
 
 /* Scrollbar */
@@ -16,28 +15,27 @@
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #222222;
+    background: var(--cor-fundo);
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--cor-02-f1);
     border-radius: 15px;
-    border: 3px solid #222222;
+    border: 3px solid transparent;
 }
 
 /* Botão de voltar pro início da página */
 .b-voltar {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     position: fixed;
     border-radius: 100%;
     display: block;
-    right: 5px;
-    bottom: 15px;
-    background: linear-gradient(#9900ff, #6022a3);
+    right: 35px;
+    bottom: 35px;
+    background-color: #6022a3;
     transition: .2s;
-    z-index: 10000;
-    opacity: 0.45;
+    z-index: 1000;
 
     & a {
         width: 100%;
@@ -53,9 +51,51 @@
     }
 
     &:hover {
-        opacity: 1;
-        transform: scale(1.05);
-        transition: .2s;
+        transform: scale(1.07);
+        transition: .15s;
+    }
+}
+
+/* Cabeçalho */
+.cabecalho {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .logo {
+        width: 198px;
+        height: auto;
+    }
+
+    & nav {
+        width: 450px;
+        height: 68px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            & li a {
+                color: #cecece;
+                font-size: 13.5px;
+                text-transform: uppercase;
+                font-weight: 700;
+
+                &:hover {
+                    color: var(--cor-t-lvl-01);
+
+                }
+            }
+        }
     }
 }
 
@@ -64,251 +104,196 @@
     width: 100%;
     height: 100%;
     display: flex;
-}
-
-/* Aba-lateral-Fundo */
-.a {
-    width: 20%;
-    height: 100%;
-    background-color: var(--cor-02-f1);
-}
-
-/* Aba-lateral */
-.page .aba-lateral {
-    width: 20%;
-    height: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: start;
-    gap: 10px;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    background-color: var(--cor-02-f1);
-}
-
-.page .aba-lateral .logo-quad {
-    width: 96%;
-    height: 90px;
-    border-radius: 7px;
-    margin-top: 15px;
-    display: flex;
-    justify-content: start;
-    background-color: var(--cor-03-f2);
-}
-
-.page .aba-lateral .logo-quad .logo {
-    width: 160px;
-    height: 85px;
-}
-
-.page .aba-lateral .c1-quad {
-    width: 96%;
-    height: 500px;
-    border-radius: 7px;
-    background-color: var(--cor-03-f2);
-}
-
-
-
-.page .aba-lateral .c2-quad {
-    width: 96%;
-    height: 250px;
-    border-radius: 7px;
-    margin-bottom: 15px;
-    background-color: var(--cor-03-f2);
-}
-
-/* Página-Principal */
-/* Texto de Bem-vindo */
-.right-page {
-    width: 80%;
-    height: 100%;
-    display: flex;
-    justify-content: start;
-    gap: 50px;
-    align-items: center;
-    flex-direction: column;
-    background: linear-gradient(#6708a7, #3b2553, #231e25, #222222, #222222);
-}
-
-.welcome {
-    width: 80%;
-    height: 120px;
-    display: flex;
-    margin-top: 45px;
-    align-items: center;
-}
-
-.welcome .text-welc {
-    font-size: 12.5pt;
-    font-weight: 600;
-}
-
-/* Filtros */
-.filters {
-    width: 75%;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-
-    & button {
-        width: 285px;
-        height: 60px;
-        border-radius: 7px;
-        background-color: rgba(0, 0, 0, 0.13);
-        font-size: 10.5pt;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        gap: 25px;
-        color: var(--cor-t-lvl-02);
-        cursor: pointer;
-
-        & img {
-            width: 50px;
-            height: 50px;
-            border-radius: 7px;
-            box-shadow: 0 0 9px black;
-        }
-    }
-
-    & button:hover {
-        background-color: rgba(0, 0, 0, 0.25);
-        color: var(--cor-t-lvl-01);
-        font-weight: 500;
-        transition: .2s;
-    }
+    gap: 25px;
 }
 
 /* Cards & Conteudo Principal */
-.albuns-populares,
-.musics-populares,
-.recomendados {
-    margin-top: 40px;
+.mais-populares {
     width: 100%;
-    height: 350px;
+    height: 750px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 7px;
-}
+    margin-top: 50px;
 
-.albuns-populares .linha,
-.musics-populares .linha,
-.recomendados .linha {
-    width: 75%;
-    height: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    background-color: #3b2553;
-    box-shadow: 0 2px 10px black, blue;
-    border-radius: 7px;
-}
+    & .title {
+        width: 945px;
+        height: 13.5px;
+        display: flex;
+        align-items: center;
+        margin-left: 22.5px;
+        font-size: 17.1px;
+        font-weight: bold;
+        
+    }
 
-.albuns-populares .superiores,
-.musics-populares .superiores,
-.recomendados .superiores {
-    width: 80%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    & .cards {
+        width: 945px;
+        height: 360px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-.albuns-populares .title-s,
-.musics-populares .title-s,
-.recomendados .title-s {
-    font-size: 13.5pt;
-}
+        & .c-img {
+            width: 243px;
+            height: 355px;
+            border-radius: 6.3px;
+            transition: .25s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
-.albuns-populares .see-more,
-.musics-populares .see-more,
-.recomendados .see-more {
-    font-size: 11.5pt;
-    text-decoration: underline;
-    cursor: pointer;
-    color: #b4b4b4;
+            &:hover{
+                transform: scale(1.02);
+            }
+        }
 
-    &:hover {
-        transform: scale(0.98);
-        color: #FBFDFF;
-        transition: .15s;
+        & img {
+            width: 229.5px;
+            height: 270px;
+            border-radius: 4px;
+            box-shadow: 0 1px 5px black;
+        }
+
+        & .text {
+            width: 229.5px;
+            height: 45px;
+            border-radius: 6.3px;
+        }
+
+        & .c-title {
+            font-size: 11.7pt;
+            font-weight: 600;
+            text-align: center;
+            color: #B5B5B5;
+            margin-top: 4.5px;
+        }
+
+        & .c-designation {
+            font-size: 9pt;
+            font-weight: 400;
+            text-align: center;
+            color: var(--cor-01-r);
+        }
     }
 }
 
-
-.albuns-populares .cards,
-.musics-populares .cards,
-.recomendados .cards {
-    width: 96%;
-    height: 350px;
+.mais-musicas {
+    width: 100%;
+    height: 325px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-}
-
-.albuns-populares .cards .c-img,
-.musics-populares .cards .c-img,
-.recomendados .cards .c-img {
-    width: 195px;
-    height: 305px;
-    border-radius: 12px;
-    transition: .25s;
-    cursor: pointer;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.05);
+    & .linha {
+        width: 1350px;
+        height: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 0;
+        background-color: #3b2553;
+        border-radius: 7px;
     }
 
-    &:hover {
-        transform: scale(1.02);
-        transition: .25s;
+    & .superiores {
+        width: 1200px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-}
 
-.albuns-populares .cards img,
-.musics-populares .cards img,
-.recomendados .cards img {
-    width: 180px;
-    height: 215px;
-    border-radius: 7px;
-    box-shadow: 0 2px 10px black;
-}
+    & .title-s {
+        font-size: 17px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
 
-.albuns-populares .cards .text,
-.musics-populares .cards .text,
-.recomendados .cards .text {
-    width: 200px;
-    height: 50px;
-    border-radius: 7px;
-}
+    & .see-more {
+        font-size: 11.5pt;
+        text-decoration: underline;
+        cursor: pointer;
+        color: #b4b4b4;
 
+        &:hover {
+            transform: scale(0.98);
+            color: #FBFDFF;
+            transition: .15s;
+        }
+    }
 
-.albuns-populares .cards .c-title,
-.musics-populares .cards .c-title,
-.recomendados .cards .c-title {
-    font-size: 12.5pt;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 5px;
-}
+    & .cards {
+        width: 1225px;
+        height: 315px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 9px;
 
-.albuns-populares .cards .c-artista,
-.musics-populares .cards .c-artista,
-.recomendados .cards .c-artista {
-    font-size: 10pt;
-    font-weight: 400;
-    text-align: center;
-    color: var(--cor-t-lvl-02);
+        & .c-img {
+            width: 195.5px;
+            height: 284.5px;
+            border-radius: 8px;
+            transition: .25s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.05);
+                transform: scale(1.02);
+                transition: .25s;
+            }
+
+            &:hover .c-designation {
+                color: var(--cor-01-r);
+                transition: .1s;
+            }
+        }
+
+        & img {
+            width: 162px;
+            height: 193.5px;
+            border-radius: 7px;
+            box-shadow: 0 2px 10px black;
+        }
+
+        & .text {
+            width: 180px;
+            height: 45px;
+            border-radius: 4px;
+        }
+
+        & .c-title {
+            font-size: 11.25pt;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 4.5px;
+        }
+
+        & .c-artista {
+            font-size: 9.9pt;
+            font-weight: 400;
+            text-align: center;
+            color: var(--cor-t-lvl-02);
+        }
+
+        & .c-designation {
+            font-size: 9pt;
+            font-weight: 500;
+            text-align: center;
+            color: transparent;
+        }
+    }
 }

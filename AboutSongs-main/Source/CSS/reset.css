@@ -10,9 +10,10 @@
 html,
 body {
     width: 100%;
-    height: 100%;
+    height: auto;
     scroll-behavior: smooth;
-    background-color: #222222;
+    background: linear-gradient(#1C1E1F, #051119) no-repeat;
+    background-size: cover;
 }
 
 ul{
