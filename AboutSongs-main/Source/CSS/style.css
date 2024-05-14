@@ -297,3 +297,117 @@
         }
     }
 }
+
+/* Comentários */
+.criticas-mais-vistas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+
+    & .superior {
+        width: 1200px;
+        height: 50px;
+
+        & .title {
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        & .line {
+            width: 1200px;
+            height: 1.5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--cor-t-lvl-01);
+        }
+    }
+
+    & .exibicao-c {
+        width: 1000px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        & .comentario {
+            width: 100%;
+            height: 325px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .referencia {
+                width: 250px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 7px;
+
+                & img {
+                    width: 150px;
+                    height: auto;
+                    border-radius: 3px;
+                }
+
+                & .music-album {
+                    text-align: center;
+                    color: #B5B5B5;
+                    font-size: 10.5pt;
+                }
+            }
+
+            & .exibicao-u {
+                width: 950px;
+                height: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                & .user {
+                    width: 100%;
+                    height: 35px;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 15px;
+                    margin-top: 55px;
+
+                    & img {
+                        width: 55px;
+                        height: 55px;
+                        border-radius: 100%;
+                    }
+
+                    & .name {
+                        font-size: 12.5pt;
+                    }
+                }
+
+                & .critica {
+                    width: 100%;
+                    height: 340px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    & p {
+                        font-size: 10.5pt;
+                        color: var(--cor-t-lvl-02);
+                    }
+                }
+            }
+        }
+        & .line {
+            
+        }
+    }
+}
