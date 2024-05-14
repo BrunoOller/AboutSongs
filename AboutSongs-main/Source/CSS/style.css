@@ -306,10 +306,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 150px;
+    gap: 5px;
 
     & .superior {
-        width: 1200px;
+        width: 1100px;
         height: 50px;
 
         & .title {
@@ -318,8 +319,8 @@
         }
 
         & .line {
-            width: 1200px;
-            height: 1.5px;
+            width: 1100px;
+            height: 1px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -328,7 +329,7 @@
     }
 
     & .exibicao-c {
-        width: 1000px;
+        width: 1150px;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -337,10 +338,12 @@
 
         & .comentario {
             width: 100%;
-            height: 325px;
+            height: 270px;
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: .4s;
+            cursor: pointer;
 
             & .referencia {
                 width: 250px;
@@ -400,14 +403,49 @@
                     align-items: center;
 
                     & p {
+                        width: 90%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         font-size: 10.5pt;
                         color: var(--cor-t-lvl-02);
+                        text-align: start;
                     }
                 }
             }
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.05);
+                border-radius: 5px;
+                transition: .4s;
+            }
         }
-        & .line {
-            
+    }
+
+    & .line {
+        width: 1100px;
+        height: 0.5px;
+        background-color: #616161;
+    }
+
+    & .ver-mais {
+        width: 1100px;
+        height: 45px;
+        display: flex;
+        justify-content: end;
+        align-items: start;
+        
+        & h2 {
+            color: #616161;
+            font-size: 9pt;
+            transition: .1s;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+                color: #757575;
+                transition: .1s;
+            }
         }
     }
 }
