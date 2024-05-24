@@ -59,11 +59,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    transition: top 0.3s;
-    gap: 45px;
+    gap: 25px;
 
     & .logo {
         width: 198px;
@@ -98,10 +94,6 @@
             }
         }
     }
-}
-
-.hidden {
-    top: -100px;
 }
 
 /* --========================================================================================================-- */
