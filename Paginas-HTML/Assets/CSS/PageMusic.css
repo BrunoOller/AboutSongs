@@ -1,0 +1,496 @@
+/* --========================================================================================================-- */
+/* --===============                                 Reset CSS                                 ==============-- */
+/* --========================================================================================================-- */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: var(--cor-t-lvl-01);
+}
+
+html,
+body {
+    width: 100%;
+    height: auto;
+    scroll-behavior: smooth;
+    background: linear-gradient(#cecece, #1C1E1F, #1C1E1F, #1C1E1F, #1C1E1F, #051119, #051119) no-repeat;
+    background-size: cover;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --========================================================================================================-- */
+/* --===============                             Página de Música                              ==============-- */
+/* --========================================================================================================-- */
+
+/* --========================================================================================================-- */
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cor-fundo);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor-02-f1);
+    border-radius: 15px;
+    border: 3px solid transparent;
+}
+
+/* --========================================================================================================-- */
+/* Botão de voltar pro início da página */
+.b-voltar {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    border-radius: 100%;
+    display: block;
+    right: 35px;
+    bottom: 35px;
+    background: linear-gradient(#CC01FF, #9400b9);
+    transition: all .55s ease;
+    z-index: 1000;
+
+    & a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+            width: 20px;
+            height: 20px;
+            filter: invert(1);
+        }
+    }
+
+    &:hover {
+        transform: scale(1.07);
+        transition: all .55s ease;
+    }
+}
+
+.b-comment {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    border-radius: 100%;
+    display: block;
+    right: 35px;
+    bottom: 80px;
+    background-color: #ea01ff;
+    transition: all .55s ease;
+    z-index: 1000;
+
+    & a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+            width: 22px;
+            height: 22px;
+            filter: invert(1);
+        }
+    }
+
+    &:hover {
+        transform: scale(1.07);
+        transition: all .55s ease;
+    }
+}
+
+/* --========================================================================================================-- */
+/* Cabeçalho */
+.cabecalho {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    & .logo {
+        width: 198px;
+        height: auto;
+    }
+
+    & nav {
+        width: 450px;
+        height: 68px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            & li a {
+                color: #cecece;
+                font-size: 13.5px;
+                text-transform: uppercase;
+                font-weight: 700;
+                transition: all .55s ease;
+                border-bottom: 2px solid transparent;
+                text-shadow: 0 2px 4px rgba(19, 19, 19, 0.726);
+
+                &:hover {
+                    color: var(--cor-t-lvl-01);
+                    transition: all .55s ease-in;
+                    border-bottom: 2px solid white;
+                }
+            }
+        }
+    }
+}
+
+/* --========================================================================================================-- */
+/* Página */
+.page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Conteúdo principal */
+/* Parte visual da música */
+.v-music {
+    width: 1100px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+
+    & .music {
+        width: 350px;
+        height: 500px;
+        border-radius: 7px;
+        box-shadow: 0 5px 10px black;
+    }
+
+    & .infos {
+        width: 500px;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+
+        & .names {
+            width: 100%;
+            height: 20px;
+            display: flex;
+            padding-left: 90px;
+            gap: 7px;
+
+            & .n-music {
+                font-size: 22.5px;
+                color: var(--cor-t-lvl-01);
+                cursor: default;
+            }
+
+            & .n-artist {
+                font-size: 16px;
+                padding-top: 6px;
+                color: #aaa;
+                cursor: default;
+            }
+        }
+
+        & .categorias {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            padding-left: 90px;
+            gap: 7px;
+
+            & h2 {
+                font-size: 18.5px;
+                color: var(--cor-t-lvl-01);
+                cursor: default;
+            }
+
+            & .c-btn {
+                width: 100%;
+                height: auto;
+
+                & button {
+                    width: 130px;
+                    height: 25px;
+                    border-radius: 4px;
+                    background-color: #282828;
+                    color: #a6a6a6;
+                    cursor: pointer;
+                    transition: all .55s ease-out;
+
+                    &:hover {
+                        background-color: #222222;
+                        color: #FBFDFF;
+                        transition: all .55s ease in;
+                    }
+                }
+            }
+        }
+
+        & .plataformas {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            padding-left: 90px;
+            gap: 7px;
+
+            & h2 {
+                font-size: 18.5px;
+                color: var(--cor-t-lvl-01);
+                cursor: default;
+            }
+
+            & .p-btn {
+                width: 100%;
+                height: auto;
+
+                & button,
+                a {
+                    width: 130px;
+                    height: 25px;
+                    border-radius: 4px;
+                    background-color: #282828;
+                    color: #a6a6a6;
+                    cursor: pointer;
+                    transition: all .55s ease-out;
+
+                    & i {
+                        color: white;
+                    }
+
+                    &:hover {
+                        background-color: #222222;
+                        color: #FBFDFF;
+                        transition: all .55s ease in;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.music-info {
+    width: 1100px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    & h2 {
+        width: 100%;
+        height: 20px;
+        font-size: 18.5px;
+        color: var(--cor-t-lvl-01);
+        cursor: default;
+        padding-left: 15px;
+    }
+
+    & p {
+        width: 100%;
+        height: auto;
+        text-align: start;
+        font-size: 16px;
+        padding-top: 6px;
+        color: var(--cor-t-lvl-02);
+        cursor: default;
+    }
+}
+
+/* Comentários */
+.criticas-mais-vistas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+
+    & .superior {
+        width: 1100px;
+        height: 50px;
+
+        & .title {
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        & .line {
+            width: 1100px;
+            height: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--cor-t-lvl-01);
+        }
+    }
+
+    & .exibicao-c {
+        width: 1150px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 15px;
+
+        & .comentario {
+            width: 100%;
+            height: 270px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .4s;
+            cursor: pointer;
+            background-color: rgba(29, 29, 29, 0.05);
+            box-shadow: 0 2px 7px rgba(19, 19, 19, 0.726);
+            border-radius: 6px;
+            border-bottom: 1px solid rgb(78, 78, 78);
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.05);
+                border-radius: 5px;
+                transition: .4s;
+            }
+
+            & .referencia {
+                width: 250px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 7px;
+
+                & img {
+                    width: 150px;
+                    height: auto;
+                    border-radius: 3px;
+                }
+
+                & .music-album {
+                    text-align: center;
+                    color: #B5B5B5;
+                    font-size: 10.5pt;
+                }
+            }
+
+            & .exibicao-u {
+                width: 950px;
+                height: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                & .user {
+                    width: 100%;
+                    height: 35px;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 15px;
+                    margin-top: 55px;
+
+                    & img {
+                        width: 55px;
+                        height: 55px;
+                        border-radius: 100%;
+                        transition: .2s;
+
+                        &:hover {
+                            transform: scale(1.05);
+                            border: 1px solid white;
+                            transition: .2s;
+                        }
+                    }
+
+                    & .name {
+                        font-size: 12.5pt;
+                        transition: .2s;
+
+                        &:hover {
+                            text-decoration: underline;
+                            transition: .2s;
+                        }
+                    }
+                }
+
+                & .critica {
+                    width: 100%;
+                    height: 340px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    & p {
+                        width: 90%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 10.5pt;
+                        color: var(--cor-t-lvl-02);
+                        text-align: start;
+                    }
+                }
+            }
+        }
+    }
+
+    & .ver-mais {
+        width: 1100px;
+        height: 45px;
+        display: flex;
+        justify-content: end;
+        align-items: start;
+        margin-top: 10px;
+
+        & h2 {
+            color: #616161;
+            font-size: 9pt;
+            transition: .1s;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+                color: #757575;
+                transition: .1s;
+            }
+        }
+    }
+}
+
+/* --========================================================================================================-- */
