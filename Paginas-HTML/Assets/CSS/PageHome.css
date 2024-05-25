@@ -26,7 +26,7 @@
     right: 35px;
     bottom: 35px;
     background-color: var(--cor-01-r);
-    transition: .2s;
+    transition: all .55s ease-out;
     z-index: 1000;
 
     & a {
@@ -44,7 +44,7 @@
 
     &:hover {
         transform: scale(1.07);
-        transition: .15s;
+        transition: all .55s ease-in;
     }
 }
 
@@ -82,10 +82,13 @@
                 font-size: 13.5px;
                 text-transform: uppercase;
                 font-weight: 700;
+                border-bottom: 2px solid transparent;
+                transition: all .55s ease-out;
 
                 &:hover {
                     color: var(--cor-t-lvl-01);
-
+                    border-bottom: 2px solid var(--cor-t-lvl-01);
+                    transition: all .55s ease-in;
                 }
             }
         }
@@ -141,9 +144,11 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            transition: all .15s ease-out;
 
             &:hover {
                 transform: scale(1.02);
+                transition: all .15s ease-in;
             }
         }
 
@@ -204,11 +209,12 @@
         text-decoration: underline;
         cursor: pointer;
         color: #b4b4b4;
+        transition: all .55s ease-out;
 
         &:hover {
             transform: scale(0.98);
             color: #FBFDFF;
-            transition: .15s;
+            transition: all .55s ease-in;
         }
     }
 
@@ -230,11 +236,12 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            transition: all .15s ease-out;
 
             &:hover {
                 background-color: rgba(255, 255, 255, 0.05);
                 transform: scale(1.02);
-                transition: .25s;
+                transition: all .15s ease-in;
             }
 
             &:hover .c-designation {
@@ -324,7 +331,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: .4s;
+            transition: all .35s ease-out;
             cursor: pointer;
             background-color: rgba(29, 29, 29, 0.05);
             box-shadow: 0 2px 7px rgba(19, 19, 19, 0.726);
@@ -334,7 +341,7 @@
             &:hover {
                 background-color: rgba(255, 255, 255, 0.05);
                 border-radius: 5px;
-                transition: .4s;
+                transition: all .35s ease-in;
             }
 
             & .referencia {
@@ -380,22 +387,22 @@
                         width: 55px;
                         height: 55px;
                         border-radius: 100%;
-                        transition: .2s;
+                        transition: all .25s ease-out;
 
                         &:hover {
                             transform: scale(1.05);
                             border: 1px solid white;
-                            transition: .2s;
+                            transition: all .25s ease-in;
                         }
                     }
 
                     & .name {
                         font-size: 12.5pt;
-                        transition: .2s;
+                        transition: all .55s ease-out;
 
                         &:hover {
                             text-decoration: underline;
-                            transition: .2s;
+                            transition: all .55s ease-in;
                         }
                     }
                 }
@@ -432,13 +439,13 @@
         & h2 {
             color: #616161;
             font-size: 9pt;
-            transition: .1s;
+            transition: all .55s ease-out;
             cursor: pointer;
 
             &:hover {
                 text-decoration: underline;
                 color: #757575;
-                transition: .1s;
+                transition: all .55s ease-in;
             }
         }
     }
