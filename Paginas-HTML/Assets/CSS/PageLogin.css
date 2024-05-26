@@ -181,8 +181,8 @@ form.entrar-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background: linear-gradient(#CC01ff, #7300a0);
-  box-shadow: 0 7px 17px #CC01ff;
+  background: linear-gradient(#b700ff, #b700ff, #b700ff, #171417);
+  box-shadow: 0 7px 15px #0d0d0dce;
   transition: 1.8s ease-in-out;
   z-index: 6;
 }
