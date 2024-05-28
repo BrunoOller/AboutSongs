@@ -15,7 +15,7 @@ body {
     width: 100%;
     height: auto;
     scroll-behavior: smooth;
-    background: linear-gradient(#1C1E1F, #051119) no-repeat;
+    background: linear-gradient(#000000, #1C1E1F, #1C1E1F, #1C1E1F, #1C1E1F, #051119) no-repeat;
     background-size: cover;
 }
 
