@@ -35,12 +35,12 @@
                 <li><a href="#">Signup</a></li>
                 <li><a href="AbaMusicAlbum.html">Albuns</a></li>
                 <li><a href="AbaMusicAlbum.html">Musics</a></li>
-                <li><a href="#">Favorites</a></li>
+                <li><a href="AbaFavorites.html">Favorites</a></li>
             </ul>
         </nav>
     </header>
     <main class="page">
-        <section class="novidades">
+        <section id="news" class="novidades">
             <img src="../Assets/Images/albuns/1.png" alt="" class="img-news">
             <div class="texts">
                 <h2>Novidades da semana</h2>
@@ -49,8 +49,22 @@
                 <p>28 de julho de 2023</p>
             </div>
         </section>
+        <section id="about" class="sobre">
+            <h2>Sobre esse site</h2>
+            <div class="blocks">
+                <div class="b-conteudo">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus debitis tenetur ipsam quibusdam</h3>
+                </div>
+                <div class="b-conteudo">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus debitis tenetur ipsam quibusdam</h3>
+                </div>
+                <div class="b-conteudo">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus debitis tenetur ipsam quibusdam</h3>
+                </div>
+            </div>
+        </section>
 
-        <section class="mais-populares">
+        <section id="musics" class="mais-populares">
             <h1 class="title">Mais populares</h1>
             <div class="cards">
                 <div class="c-img">
@@ -139,7 +153,7 @@
                 </div>
             </div>
         </section>
-        <section class="criticas-mais-vistas">
+        <section id="comments" class="criticas-mais-vistas">
             <div class="superior">
                 <h2 class="title">Comentários</h2>
                 <div class="line"></div>
@@ -213,8 +227,16 @@
         <div class="b-voltar">
             <a href="#"><img src="../Assets/Images/arrow-up-solid.svg"></a>
         </div>
-
+        <div class="btn-scroll">
+            <ul>
+                <li><a href="#news"><img src="../Assets/Images/newspaper-regular.svg" alt=""></a></li>
+                <li><a href="#about"><img src="../Assets/Images/question-solid.svg" alt=""></a></li>
+                <li><a href="#musics"><img src="../Assets/Images/music-solid.svg" alt=""></a></li>
+                <li><a href="#comments"><img src="../Assets/Images/comment-regular.svg" alt=""></a></li>
+            </ul>
+        </div>
     </main>
+
 </body>
 
 </html>
