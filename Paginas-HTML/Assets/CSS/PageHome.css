@@ -145,6 +145,7 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    gap: 105px;
 }
 
 /* Novidades semanais */
@@ -167,18 +168,18 @@
         height: 100%;
         border-radius: 15px;
         padding-top: 10px;
-        box-shadow: 0 0 80px #ce1a1a;
+        box-shadow: 0 0 80px #02005e;
     }
 
     & .texts {
-        width: 575px;
+        width: 550px;
         height: 600px;
         display: flex;
         flex-direction: column;
         justify-content: end;
         align-items: start;
         position: absolute;
-        text-shadow: 0 0 8px rgba(28, 30, 31, 0.932);
+        text-shadow: 0 0 10px black;
         font-family: "Adamina", serif;
         font-style: normal;
         text-align: start;
@@ -198,6 +199,7 @@
 
         & h4 {
             font-size: 13pt;
+            font-weight: 500;
         }
 
         & p {
@@ -210,7 +212,7 @@
 /* Sobre o site */
 .sobre {
     width: 1100px;
-    height: 400px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -241,15 +243,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #4d4d4d;
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+            border-radius: 7px;
             cursor: pointer;
             transition: all .33s ease-out;
 
             & h3 {
                 width: 300px;
-                font-size: 17px;
+                font-size: 15px;
                 text-align: center;
                 color: #B5B5B5;
             }
@@ -257,6 +259,7 @@
             &:hover {
                 transform: scale(1.03);
                 transition: all .13s ease-in;
+                padding-bottom: 5px;
             }
         }
     }
@@ -265,12 +268,11 @@
 /* Cards & Conteudo Principal */
 .mais-populares {
     width: 100%;
-    height: 750px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: -70px;
 
     & .title {
         width: 905px;
@@ -300,7 +302,7 @@
             align-items: center;
             justify-content: center;
             transition: all .15s ease-out;
-
+ 
             &:hover {
                 background-color: rgba(255, 255, 255, 0.05);
                 transform: scale(1.02);
@@ -341,18 +343,20 @@
 /* Mais cards */
 .mais-musicas {
     width: 100%;
-    height: 325px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
     & .superiores {
-        width: 1200px;
-        height: 50px;
+        width: 1100px;
+        height: 13.5px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-size: 18.1px;
+        font-weight: bold;
     }
 
     & .title-s {
@@ -451,7 +455,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 150px;
     gap: 5px;
 
     & .superior {
@@ -474,46 +477,41 @@
     }
 
     & .exibicao-c {
-        width: 1150px;
-        height: 100%;
+        width: 1125px;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-bottom: 15px;
 
         & .comentario {
             width: 100%;
-            height: 270px;
+            height: 265px;
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all .35s ease-out;
             cursor: pointer;
             background-color: rgba(29, 29, 29, 0.05);
-            box-shadow: 0 2px 7px rgba(19, 19, 19, 0.726);
+            box-shadow: 0 7px 20px rgba(3, 3, 3, 0.3);
             border-radius: 6px;
-            border-bottom: 1px solid rgb(78, 78, 78);
-
-            &:hover {
-                background-color: rgba(255, 255, 255, 0.05);
-                border-radius: 5px;
-                transition: all .35s ease-in;
-            }
+            border-bottom: 1px solid rgb(36, 36, 36);
 
             & .referencia {
-                width: 250px;
+                width: 200px;
                 height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                transition: all .35s ease-out;
                 gap: 7px;
 
                 & img {
                     width: 150px;
                     height: auto;
                     border-radius: 3px;
+                    box-shadow: 0 0 10px black;
+                    transition: all .35s ease-out;
                 }
 
                 & .music-album {
@@ -521,35 +519,41 @@
                     color: #B5B5B5;
                     font-size: 10.5pt;
                 }
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border-radius: 5px;
+                    transition: all .35s ease-in;
+                }
+
+                &:hover img {
+                    transform: scale(1.05);
+                    transition: all .35s ease-in;
+                }
             }
 
             & .exibicao-u {
-                width: 950px;
-                height: 250px;
+                width: 900px;
+                height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                gap: 15px;
+                transition: all .35s ease-out;
 
                 & .user {
-                    width: 100%;
-                    height: 35px;
+                    width: 825px;
+                    height: auto;
                     display: flex;
                     justify-content: start;
                     align-items: center;
                     gap: 15px;
-                    margin-top: 55px;
 
                     & img {
                         width: 55px;
                         height: 55px;
                         border-radius: 100%;
-                        transition: all .25s ease-out;
-
-                        &:hover {
-                            border: 1px solid white;
-                            transition: all .25s ease-in;
-                        }
                     }
 
                     & .name {
@@ -565,7 +569,7 @@
 
                 & .critica {
                     width: 100%;
-                    height: 340px;
+                    height: auto;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -576,9 +580,21 @@
                         justify-content: center;
                         align-items: center;
                         font-size: 10.5pt;
-                        color: var(--cor-t-lvl-02);
+                        transition: all .35s ease-out;
+                        color: rgb(177, 177, 177);
                         text-align: start;
                     }
+                }
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border-radius: 5px;
+                    transition: all .35s ease-in;
+                }
+
+                &:hover .critica p {
+                    color: var(--cor-t-lvl-01);
+                    transition: all .35s ease-in;
                 }
             }
         }
@@ -593,14 +609,15 @@
         margin-top: 10px;
 
         & h2 {
-            color: #616161;
-            font-size: 9pt;
-            transition: all .55s ease-out;
+            font-size: 9.5pt;
+            text-decoration: underline;
             cursor: pointer;
+            color: #9e9e9e;
+            transition: all .55s ease-out;
 
             &:hover {
-                text-decoration: underline;
-                color: #757575;
+                transform: scale(0.98);
+                color: #FBFDFF;
                 transition: all .55s ease-in;
             }
         }
