@@ -280,7 +280,7 @@ a {
     /* --========================================================================================================-- */
     & .album {
         width: 350px;
-        height: 500px;
+        height: auto;
         border-radius: 7px;
         box-shadow: 0 0 100px black;
         transition: all .35s ease-in;
