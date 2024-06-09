@@ -15,7 +15,7 @@ body {
     width: 100%;
     height: auto;
     scroll-behavior: smooth;
-    background: linear-gradient(#000000 0%, #1c1e1f 15%, #1c1e1f 45%, #051119 100%) no-repeat;
+    background: linear-gradient(#cc01ffb7 0%, #1c1e1f 35%, #1c1e1f 75%, #051119 100%) no-repeat;
     background-size: cover;
 }
 
@@ -213,30 +213,23 @@ a {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    gap: 50px;
 }
 
 /* Conteúdo principal */
 /* Parte visual da música */
-.v-music {
+.v-perfil {
     width: 1100px;
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 55px;
+    margin-top: 155px;
 
-    & .music {
+    & .perfil {
         width: 400px;
-        height: auto;
-        border-radius: 7px;
+        height: 400px;
+        border-radius: 15px;
         box-shadow: 0 0 100px #000000;
-        transition: all .35s ease-in;
-
-        &:hover {
-            transform: scale(1.03);
-            transition: all .35s ease-out;
-        }
     }
 
     & .infos {
@@ -246,7 +239,7 @@ a {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 40px;
+        gap: 10px;
 
         & .names {
             width: 100%;
@@ -255,18 +248,29 @@ a {
             padding-left: 90px;
             gap: 7px;
 
-            & .n-music {
+            & .n-perfil {
                 font-size: 22.5px;
                 color: var(--cor-t-lvl-01);
                 cursor: default;
             }
 
-            & .n-artist {
+            & .data {
                 font-size: 16px;
                 padding-top: 6px;
                 color: #aaa;
                 cursor: default;
             }
+        }
+
+        & .username {
+            width: 100%;
+            height: auto;
+            display: flex;
+            font-size: 15px;
+            padding-left: 90px;
+            color: var(--cor-t-lvl-02);
+            text-decoration: underline;
+            cursor: default;
         }
 
         & .categorias {
@@ -275,6 +279,7 @@ a {
             display: flex;
             flex-direction: column;
             padding-left: 90px;
+            padding-top: 15px;
             gap: 7px;
 
             & h2 {
@@ -304,53 +309,12 @@ a {
                 }
             }
         }
-
-        & .plataformas {
-            width: 100%;
-            height: 50px;
-            display: flex;
-            flex-direction: column;
-            padding-left: 90px;
-            gap: 7px;
-
-            & h2 {
-                font-size: 18.5px;
-                color: var(--cor-t-lvl-01);
-                cursor: default;
-            }
-
-            & .p-btn {
-                width: 100%;
-                height: auto;
-
-                & button,
-                a {
-                    width: 130px;
-                    height: 25px;
-                    border-radius: 4px;
-                    background-color: #282828;
-                    color: #a6a6a6;
-                    cursor: pointer;
-                    transition: all .55s ease-out;
-
-                    & i {
-                        color: white;
-                    }
-
-                    &:hover {
-                        background-color: #222222;
-                        color: #FBFDFF;
-                        transition: all .55s ease in;
-                    }
-                }
-            }
-        }
     }
 }
 
-.music-info {
+.perfil-info {
     width: 1100px;
-    height: 400px;
+    height: 307px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -374,170 +338,6 @@ a {
         padding-top: 6px;
         color: var(--cor-t-lvl-02);
         cursor: default;
-    }
-}
-
-/* Comentários */
-.criticas-mais-vistas {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 5px;
-
-    & .superior {
-        width: 1100px;
-        height: 50px;
-
-        & .title {
-            font-size: 17px;
-            margin-bottom: 15px;
-        }
-
-        & .line {
-            width: 1100px;
-            height: 1px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: var(--cor-t-lvl-01);
-        }
-    }
-
-    & .exibicao-c {
-        width: 1150px;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-bottom: 15px;
-
-        & .comentario {
-            width: 100%;
-            height: 270px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: .4s;
-            cursor: pointer;
-            background-color: rgba(29, 29, 29, 0.05);
-            box-shadow: 0 2px 7px rgba(19, 19, 19, 0.726);
-            border-radius: 6px;
-            border-bottom: 1px solid rgb(78, 78, 78);
-
-            &:hover {
-                background-color: rgba(255, 255, 255, 0.05);
-                border-radius: 5px;
-                transition: .4s;
-            }
-
-            & .referencia {
-                width: 250px;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                gap: 7px;
-
-                & img {
-                    width: 150px;
-                    height: auto;
-                    border-radius: 3px;
-                }
-
-                & .music-album {
-                    text-align: center;
-                    color: #B5B5B5;
-                    font-size: 10.5pt;
-                }
-            }
-
-            & .exibicao-u {
-                width: 950px;
-                height: 250px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-
-                & .user {
-                    width: 100%;
-                    height: 35px;
-                    display: flex;
-                    justify-content: start;
-                    align-items: center;
-                    gap: 15px;
-                    margin-top: 55px;
-
-                    & img {
-                        width: 55px;
-                        height: 55px;
-                        border-radius: 100%;
-                        transition: .2s;
-
-                        &:hover {
-                            transform: scale(1.05);
-                            border: 1px solid white;
-                            transition: .2s;
-                        }
-                    }
-
-                    & .name {
-                        font-size: 12.5pt;
-                        transition: .2s;
-
-                        &:hover {
-                            text-decoration: underline;
-                            transition: .2s;
-                        }
-                    }
-                }
-
-                & .critica {
-                    width: 100%;
-                    height: 340px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    & p {
-                        width: 90%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-size: 10.5pt;
-                        color: var(--cor-t-lvl-02);
-                        text-align: start;
-                    }
-                }
-            }
-        }
-    }
-
-    & .ver-mais {
-        width: 1100px;
-        height: 45px;
-        display: flex;
-        justify-content: end;
-        align-items: start;
-        margin-top: 10px;
-
-        & h2 {
-            color: #616161;
-            font-size: 9pt;
-            transition: .1s;
-            cursor: pointer;
-
-            &:hover {
-                text-decoration: underline;
-                color: #757575;
-                transition: .1s;
-            }
-        }
     }
 }
 
