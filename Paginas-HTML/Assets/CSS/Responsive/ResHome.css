@@ -1,0 +1,121 @@
+/* --========================================================================================================-- */
+@media (max-width: 1420px) {
+
+    /* Cabeçalho */
+    .cabecalho {
+        gap: 20px;
+
+        & .logo {
+            width: 188px;
+        }
+
+        & nav {
+            width: 398px;
+            height: 66px;
+
+            & ul {
+                gap: 19px;
+
+                & li a {
+                    font-size: 13.1px;
+
+                    &:hover {
+                        border-bottom: 1.98px solid var(--cor-t-lvl-01);
+                    }
+                }
+            }
+        }
+    }
+
+    /* Página */
+    .page {
+        gap: 103.8px;
+    }
+
+    /* Novidades semanais */
+    .novidades {
+        width: 596px;
+        height: 596px;
+
+        &:hover {
+            transform: scale(1.013);
+        }
+
+        & .img-news {
+            border-radius: 14.7px;
+            padding-top: 9.8px;
+        }
+
+        & .texts {
+            width: 548px;
+            height: 596px;
+            line-height: 1.19;
+            padding-bottom: 4.9px;
+
+            & h2 {
+                font-size: 18.9pt;
+            }
+
+            & h3 {
+                font-size: 14.9pt;
+            }
+
+            & h4 {
+                font-size: 12.9pt;
+            }
+
+            & p {
+                font-size: 9.9pt;
+            }
+        }
+    }
+
+    /* Sobre o site */
+    .sobre {
+        width: 1050px;
+        gap: 14.8px;
+
+        & h2 {
+            width: 904.9px;
+            margin-left: 22.4px;
+            font-size: 18px;
+        }
+
+        & .blocks {
+            gap: 9.9px;
+
+            & .b-conteudo {
+                width: 319.9px;
+                height: 149.9px;
+                border-radius: 6.9px;
+
+                & i {
+                    width: 58px;
+                    font-size: 33px;
+                }
+
+                & .fa-comment {
+                    color: #01c0ff;
+                }
+
+                & .fa-star {
+                    color: #fff201;
+                }
+
+                & .fa-heart {
+                    color: #ff0101;
+                }
+
+                & h3 {
+                    width: 239.8px;
+                    font-size: 12.4px;
+                    text-align: center;
+                }
+
+                &:hover {
+                    transform: scale(1.025);
+                }
+            }
+        }
+    }
+}
