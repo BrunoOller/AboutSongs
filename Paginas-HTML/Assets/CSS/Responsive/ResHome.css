@@ -544,3 +544,327 @@
         }
     }
 }
+
+/* --========================================================================================================-- */
+@media (max-width: 1036px) {
+
+    /* Perfil */
+    .perfil {
+        width: 60px;
+        height: 59px;
+        display: block;
+        top: 90%;
+        left: 75%;
+        background-color: #000000;
+        box-shadow: 0 0 5px black;
+        border-radius: 7px;
+        transition: all .35s ease-out;
+
+        & a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+            & i {
+                font-size: 25px;
+            }
+        }
+
+        &:hover {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 100px;
+            transform: scale(1);
+            transition: all .35s ease-in;
+        }
+    }
+
+    /* Botão de voltar pro início da página */
+    .b-voltar {
+        display: none;
+    }
+
+    /* Botões de Scrollagem */
+    .btn-scroll {
+        display: none;
+    }
+
+    /* Cabeçalho */
+    .cabecalho {
+        width: 500px;
+        height: 60px;
+        position: fixed;
+        display: block;
+        top: 90%;
+        left: 20%;
+        background: #000000;
+        box-shadow: 0 0 5px black;
+        border-radius: 7px;
+        gap: 30px;
+
+        & .logo {
+            display: none;
+        }
+
+        & nav {
+            width: 100%;
+            height: 60px;
+
+            & ul {
+                gap: 5px;
+
+                & li {
+                    width: 90px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 7px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: rgba(255,255,255,0.1);
+                    }
+
+                    & a {
+                        font-size: 13.1px;
+    
+                        &:hover {
+                            border-bottom: 2px solid transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Página */
+    .page {
+        gap: 99.8px;
+    }
+
+    /* Novidades semanais */
+    .novidades {
+        width: 470px;
+        height: 470px;
+
+        &:hover {
+            transform: scale(1.013);
+        }
+
+        & .img-news {
+            border-radius: 14.3px;
+            padding-top: 9px;
+        }
+
+        & .texts {
+            width: 445px;
+            height: 485px;
+
+            & h2 {
+                font-size: 18pt;
+            }
+
+            & h3 {
+                font-size: 14pt;
+            }
+
+            & h4 {
+                font-size: 12pt;
+            }
+
+            & p {
+                font-size: 9pt;
+            }
+        }
+    }
+
+    /* Sobre o site */
+    .sobre {
+        width: 550px;
+        gap: 14px;
+
+        & h2 {
+            width: 600px;
+            margin-left: 22.4px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        & .blocks {
+            width: 750px;
+            height: auto;
+            flex-wrap: wrap;
+            gap: 9px;
+
+            & .b-conteudo {
+                width: 350px;
+                height: 146.3px;
+
+                & i {
+                    width: 150px;
+                    font-size: 33px;
+                }
+
+                & h3 {
+                    width: 300px;
+                    font-size: 12px;
+                    padding-right: 25px;
+                    border-left: none;
+                }
+            }
+        }
+    }
+
+    /* Cards & Conteudo Principal */
+    .mais-populares {
+
+        & .title {
+            width: 901.5px;
+            height: 12.5px;
+            font-size: 17px;
+        }
+
+        & .cards {
+            width: 930px;
+            height: 355px;
+
+            & .c-img {
+                width: 220px;
+                height: 323px;
+            }
+
+            & img {
+                width: 200px;
+                height: 240px;
+            }
+        }
+    }
+
+    /* Mais cards */
+    .mais-musicas {
+
+        & .superiores {
+            width: 950px;
+            height: 13px;
+            font-size: 17px;
+        }
+
+        & .title-s {
+            font-size: 17px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        & .cards {
+            width: 1000px;
+            height: 300px;
+            gap: 7px;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+
+            & .c-img {
+                width: 180px;
+                height: 270px;
+                margin-top: 15px;
+                border-radius: 8px;
+            }
+
+            & img {
+                width: 152px;
+                height: 184px;
+            }
+
+            & .c-title {
+                font-size: 10pt;
+                font-weight: 500;
+            }
+
+            & .c-artista {
+                font-size: 9pt;
+            }
+
+            & .c-designation {
+                font-size: 8.8pt;
+            }
+        }
+    }
+
+    /* Comentários */
+    .criticas-mais-vistas {
+
+        & .superior {
+            width: 900px;
+
+            & .line {
+                width: 900px;
+            }
+
+            & .title {
+                font-size: 15px;
+                margin-bottom: 13px;
+            }
+        }
+
+        & .exibicao-c {
+            width: 940px;
+
+            & .comentario {
+                width: 100%;
+                height: 240px;
+
+                & .referencia {
+                    width: 170px;
+
+                    & img {
+                        width: 115px;
+                    }
+
+                    & .music-album {
+                        font-size: 10pt;
+                        font-weight: 600;
+                    }
+
+                    &:hover img {
+                        transform: scale(1.025);
+                    }
+                }
+
+                & .exibicao-u {
+                    width: 770px;
+                    gap: 15px;
+
+                    & .user {
+                        width: 700px;
+                        gap: 12px;
+
+                        & .name {
+                            font-size: 11.5pt;
+                            font-weight: 500;
+                        }
+                    }
+
+                    & .critica {
+
+                        & p {
+                            font-size: 9.5pt;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .ver-mais {
+            width: 870px;
+            margin-top: 9px;
+
+            & h2 {
+                font-size: 9.2pt;
+            }
+        }
+    }
+}
