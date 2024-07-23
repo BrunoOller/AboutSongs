@@ -18,7 +18,8 @@
 
 /* Botão de voltar pro início da página */
 .b-voltar {
-    width: 40px;
+    max-width: 40px;
+    width: 100%;
     height: 40px;
     position: fixed;
     border-radius: 100%;
@@ -49,77 +50,6 @@
     }
 }
 
-/* Botões de Scrollagem */
-.btn-scroll {
-    position: fixed;
-    z-index: 10000;
-    width: 60px;
-    height: 245px;
-    display: block;
-    top: 40%;
-    left: 20px;
-    background-color: #00000067;
-    box-shadow: 0 2px 5px black;
-    border-radius: 7px;
-
-    & ul {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 10px;
-
-        & li a img {
-            width: 25px;
-            height: 25px;
-            filter: invert(0.8);
-            transition: all .3s ease-out;
-
-            &:hover {
-                filter: invert(1);
-                transform: scale(1.04);
-                transition: all .3s ease-in;
-            }
-        }
-    }
-}
-
-/* Perfil */
-.perfil {
-    position: fixed;
-    z-index: 10000;
-    width: 50px;
-    height: 50px;
-    display: block;
-    top: 20px;
-    left: 20px;
-    background-color: #00000067;
-    box-shadow: 0 2px 5px black;
-    border-radius: 30px;
-    transition: all .35s ease-out;
-
-    & a {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-
-        & i {
-            font-size: 19px;
-        }
-    }
-
-    &:hover {
-        background-color: #0000006b;
-        transform: scale(1.035);
-        transition: all .35s ease-in;
-    }
-}
-
 /* Cabeçalho */
 .cabecalho {
     width: 100%;
@@ -135,11 +65,11 @@
     & .logo {
         width: 198px;
         height: auto;
-        filter: drop-shadow(0 0 10px rgba(28, 30, 31, 0.5));
+        filter: drop-shadow(0 0 10px rgb(0, 0, 0));
     }
 
     & nav {
-        width: 400px;
+        width: 500px;
         height: 68px;
         display: flex;
         justify-content: center;
@@ -160,7 +90,7 @@
                 font-weight: 700;
                 border-bottom: 2px solid transparent;
                 transition: all .55s ease-out;
-                text-shadow: 0 2px 4px rgba(28, 30, 31, 0.5);
+                text-shadow: 0 0 10px rgb(0, 0, 0);
 
                 &:hover {
                     color: var(--cor-t-lvl-01);
@@ -180,143 +110,87 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    gap: 105px;
+    gap: 120px;
 }
 
-/* Novidades semanais */
-.novidades {
-    width: 600px;
-    height: 600px;
+/* Inicio da página */
+.inicio {
+    width: 100%;
+    max-width: 1250px;
+    height: 695px;
+    margin-top: 35px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    transition: all .25s ease-out;
 
-    &:hover {
-        transform: scale(1.015);
-        transition: all .25s ease-in;
+    & .banner {
+        width: 500px;
+        height: auto;
+
+        & img {
+            width: auto;
+            height: 635px;
+            border-radius: 7px;
+            box-shadow: 0 0 50px #14191F;
+            filter: brightness(70%);
+            filter: saturate(2);
+        }
     }
 
-    & .img-news {
-        width: auto;
-        height: 100%;
-        border-radius: 15px;
-        padding-top: 10px;
-        box-shadow: 0 0 80px #02005e;
-    }
-
-    & .texts {
-        width: 550px;
-        height: 600px;
+    & .content {
+        width: 650px;
+        height: auto;
+        padding-top: 15px;
         display: flex;
         flex-direction: column;
-        justify-content: end;
-        align-items: start;
-        position: absolute;
-        text-shadow: 0 0 10px black;
-        font-family: "Adamina", serif;
-        font-style: normal;
-        text-align: start;
-        font-weight: 400;
-        cursor: default;
-        text-transform: uppercase;
-        line-height: 1.2;
-        padding-bottom: 5px;
+        gap: 15px;
 
-        & h2 {
-            font-size: 19pt;
+        & img {
+            width: 590px;
+            height: auto;
         }
 
-        & h3 {
-            font-size: 15pt;
+        & h1 {
+            padding-left: 25px;
+            font-size: 20px;
+            font-weight: bold;
         }
 
-        & h4 {
-            font-size: 13pt;
-            font-weight: 500;
-        }
-
-        & p {
-            font-size: 10pt;
-            color: #CECECE;
-        }
-    }
-}
-
-/* Sobre o site */
-.sobre {
-    width: 1100px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
-
-    & h2 {
-        width: 905px;
-        height: 13.5px;
-        display: flex;
-        align-items: center;
-        margin-left: 22.5px;
-        font-size: 18.1px;
-        font-weight: bold;
-    }
-
-    & .blocks {
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-
-        & .b-conteudo {
-            width: 320px;
-            height: 150px;
+        & .cards {
+            height: 290px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            background-color: rgba(255, 255, 255, 0.05);
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+            gap: 2.5px;
+            padding-left: 10px;
             border-radius: 7px;
-            cursor: pointer;
-            transition: all .33s ease-out;
+            background-color: #42424299;
+            box-shadow: 0 0 15px black;
+            gap: 5px;
 
-            & i {
-                width: 60px;
-                font-size: 35px;
-                text-align: center;
-                filter: saturate(100);
-                text-shadow: 0 0 10px black;
-            }
+            & .c-img {
+                width: 207px;
+                height: 270px;
+                border-radius: 6.3px;
+                transition: .25s;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: all .15s ease-out;
 
-            & .fa-comment {
-                color: #01c0ff;
-            }
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.05);
+                    transform: scale(1.02);
+                    transition: all .15s ease-in;
+                }
 
-            & .fa-star {
-                color: #fff201;
-            }
-
-            & .fa-heart {
-                color: #ff0101;
-            }
-
-            & h3 {
-                width: 240px;
-                font-size: 12.5px;
-                text-align: center;
-                color: #B5B5B5;
-                text-shadow: 0 0 10px black;
-                border-left: 1px solid #0000006b;
-            }
-
-            &:hover {
-                transform: scale(1.03);
-                transition: all .13s ease-in;
-                padding-bottom: 5px;
+                & img {
+                    width: 195px;
+                    height: 235px;
+                    border-radius: 7px;
+                    box-shadow: 0 0 15px black;
+                    filter: saturate(2);
+                }
             }
         }
     }
@@ -332,21 +206,26 @@
     flex-direction: column;
 
     & .title {
-        width: 905px;
+        width: 1200px;
         height: 13.5px;
         display: flex;
         align-items: center;
         margin-left: 22.5px;
         font-size: 18.1px;
         font-weight: bold;
+        margin-bottom: 15px;
     }
 
     & .cards {
-        width: 945px;
+        width: 1250px;
         height: 360px;
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 5px;
+        border-radius: 7px;
+        background-color: #42424299;
+        box-shadow: 0 0 15px black;
 
         & .c-img {
             width: 243px;
@@ -359,40 +238,42 @@
             align-items: center;
             justify-content: center;
             transition: all .15s ease-out;
- 
+            gap: 5px;
+
             &:hover {
                 background-color: rgba(255, 255, 255, 0.05);
                 transform: scale(1.02);
                 transition: all .15s ease-in;
             }
-        }
 
-        & img {
-            width: 215px;
-            height: 260px;
-            border-radius: 7px;
-            box-shadow: 0 0 15px black;
-        }
+            & img {
+                width: 215px;
+                height: 245px;
+                border-radius: 7px;
+                box-shadow: 0 0 15px black;
+                filter: saturate(2);
+            }
 
-        & .text {
-            width: 229.5px;
-            height: 45px;
-            border-radius: 6.3px;
-        }
+            & .text {
+                width: 229.5px;
+                height: 45px;
+                border-radius: 6.3px;
+            }
 
-        & .c-title {
-            font-size: 11.7pt;
-            font-weight: 600;
-            text-align: center;
-            color: #B5B5B5;
-            margin-top: 4.5px;
-        }
+            & .c-title {
+                font-size: 11.7pt;
+                font-weight: 600;
+                text-align: center;
+                color: #B5B5B5;
+                margin-top: 4.5px;
+            }
 
-        & .c-designation {
-            font-size: 9pt;
-            font-weight: 400;
-            text-align: center;
-            color: var(--cor-01-r);
+            & .c-designation {
+                font-size: 9pt;
+                font-weight: 400;
+                text-align: center;
+                color: var(--cor-01-r);
+            }
         }
     }
 }
@@ -407,13 +288,14 @@
     flex-direction: column;
 
     & .superiores {
-        width: 1100px;
-        height: 13.5px;
+        width: 1225px;
+        height: 10.5px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 18.1px;
         font-weight: bold;
+        margin-bottom: 15px;
     }
 
     & .title-s {
@@ -437,16 +319,19 @@
     }
 
     & .cards {
-        width: 1225px;
-        height: 315px;
+        width: 1250px;
+        height: 265px;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 9px;
+        gap: 1.5px;
+        border-radius: 7px;
+        background-color: #42424299;
+        box-shadow: 0 0 15px black;
 
         & .c-img {
-            width: 195.5px;
-            height: 284.5px;
+            width: 175px;
+            height: 205.5px;
             border-radius: 8px;
             transition: .25s;
             cursor: pointer;
@@ -454,52 +339,21 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            transition: all .35s ease-out;
+            transition: all .3s ease-out;
 
             &:hover {
-                background-color: rgba(255, 255, 255, 0.05);
+                background-color: rgba(255, 255, 255, 0.233);
                 transform: scale(1.02);
-                transition: all .35s ease-in;
+                transition: all .3s ease-in;
             }
 
-            &:hover .c-designation {
-                color: var(--cor-01-r);
-                transition: .3s;
+            & img {
+                width: 166px;
+                height: 193.5px;
+                border-radius: 7px;
+                box-shadow: 0 0 10px black;
+                filter: saturate(2);
             }
-        }
-
-        & img {
-            width: 162px;
-            height: 193.5px;
-            border-radius: 7px;
-            box-shadow: 0 0 10px black;
-        }
-
-        & .text {
-            width: 180px;
-            height: 45px;
-            border-radius: 4px;
-        }
-
-        & .c-title {
-            font-size: 11.25pt;
-            font-weight: 700;
-            text-align: center;
-            margin-top: 4.5px;
-        }
-
-        & .c-artista {
-            font-size: 9.9pt;
-            font-weight: 400;
-            text-align: center;
-            color: var(--cor-t-lvl-02);
-        }
-
-        & .c-designation {
-            font-size: 9pt;
-            font-weight: 500;
-            text-align: center;
-            color: transparent;
         }
     }
 }
@@ -569,6 +423,7 @@
                     border-radius: 3px;
                     box-shadow: 0 0 10px black;
                     transition: all .35s ease-out;
+                    filter: saturate(2);
                 }
 
                 & .music-album {
@@ -611,6 +466,7 @@
                         width: 55px;
                         height: 55px;
                         border-radius: 100%;
+                        filter: saturate(2);
                     }
 
                     & .name {
