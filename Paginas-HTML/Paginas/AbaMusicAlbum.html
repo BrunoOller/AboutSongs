@@ -33,26 +33,27 @@
     <!-- --========================================================================================================-- -->
     <!-- Cabeçalho - Logo e Abas -->
     <header class="cabecalho">
-        <img src="../Assets/Images/logo-home.png" alt="Logo AboutSongs" class="logo">
-        <nav>
+        <div class="img">
+            <img src="../Assets/Images/logo-home.png" alt="Logo AboutSongs" class="logo">
+        </div>
+        <div class="pesquisa">
+            <div class="input-field">
+                <i class="fas fa-search"></i>
+                <input class="search-bar" type="search" name="search" placeholder="Pesquisar.">
+            </div>
+        </div>
+        <nav class="nav-bar">
             <ul>
-                <li><a href="PageHome.html">Início</a></li>
-                <li><a href="PageLogin.html">Login</a></li>
-                <li><a href="#">Albuns</a></li>
-                <li><a href="#">Musics</a></li>
-                <li><a href="AbaFavorites.html">Favorites</a></li>
+                <li><a href="./PageLogin.html">Entrar</a></li>
+                <li><a href="./PageLogin.html">Cadastrar</a></li>
+                <li><a href="./AbaMusicAlbum.html">Músicas</a></li>
+                <li><a href="./AbaMusicAlbum.html">Álbuns</a></li>
+                <li><a href="./AbaFavorites.html">Favoritos</a></li>
             </ul>
         </nav>
     </header>
     <!-- --========================================================================================================-- -->
     <main class="page">
-
-        <section class="search">
-            <div class="input-field">
-                <i class="fas fa-search"></i>
-                <input class="search-bar" type="search" name="search" placeholder="Pesquisar.">
-            </div>
-        </section>
         <!-- --========================================================================================================-- -->
         <section class="filter">
             <h1 class="title-f">Filtros</h1>
@@ -378,8 +379,11 @@
             <a href="#"><img src="../Assets/Images/arrow-up-solid.svg"></a>
         </div>
     </main>
-    <!-- --========================================================================================================-- -->
 
+    <!-- --========================================================================================================-- -->
+    <!-- Link JS -->
+    <script src="../Assets/JS/header.js"></script>
+    <!-- --========================================================================================================-- -->
 </body>
 
 </html>
