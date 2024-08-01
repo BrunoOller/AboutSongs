@@ -15,7 +15,7 @@ body {
     width: 100%;
     height: auto;
     scroll-behavior: smooth;
-    background: linear-gradient(#000000a6 0%, #19526e 17%, #152933 41%, #051119 88%, #11131D 100%) no-repeat;
+    background: linear-gradient(#000000a6 0%, #333333 17%, #152933 41%, #051119 88%, #11131D 100%) no-repeat;
     background-size: cover;
 }
 
@@ -66,8 +66,8 @@ a {
         gap: 15px;
 
         & li a img {
-            width: 25px;
-            height: 25px;
+            width: 22.5px;
+            height: 22.5px;
             filter: invert(0.8);
             transition: all .3s ease-out;
 

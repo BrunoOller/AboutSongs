@@ -49,12 +49,27 @@
         & img {
             width: 590px;
             height: auto;
+            filter: drop-shadow(0 0 50px rgb(0, 0, 0));
         }
 
-        & h1 {
-            padding-left: 25px;
-            font-size: 20px;
-            font-weight: bold;
+        & .textos {
+            width: 100%;
+            height: 35px;
+
+            & h1 {
+                padding-left: 25px;
+                font-size: 21px;
+                font-weight: 600;
+                text-shadow: 0 0 10px black;
+            }
+
+            & h2 {
+                padding-left: 25px;
+                font-size: 20px;
+                font-weight: 500;
+                color: var(--cor-t-lvl-02);
+                text-shadow: 0 0 10px var(--cor-04-f3);
+            }
         }
 
         & .cards {
