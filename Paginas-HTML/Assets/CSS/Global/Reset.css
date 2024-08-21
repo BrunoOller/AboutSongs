@@ -140,21 +140,22 @@ a {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 25px;
 
             & li {
                 
 
                 & a {
+                    padding: 12px;
                     font-weight: 500;
                     border-bottom: 2px solid transparent;
                     color: var(--cor-t-lvl-02);
                     transition: .55s ease-out;
     
                     &:hover {
+                        background-color: var(--cor-01-r);
                         transition: .55s ease-in;
-                        color: var(--cor-01-r);
-                        border-bottom: 2px solid var(--cor-01-r);
+                        color: var(--cor-t-lvl-02);
+                        border-radius: 10px 0 10px 0;
                     }
                 }
             }
