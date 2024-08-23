@@ -15,7 +15,7 @@ body {
     width: 100%;
     height: auto;
     scroll-behavior: smooth;
-    background-color: #111111;
+    background-color: #000000;
     background-size: cover;
 }
 
@@ -118,7 +118,7 @@ a {
     align-items: center;
     position: fixed;
     z-index: 10;
-    background: linear-gradient(#111111, #111111c9);
+    background: linear-gradient(#000000, #000000);
     top: 0;
     left: 0;
     transition: top .3s;
