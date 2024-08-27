@@ -31,224 +31,54 @@
 </head>
 
 <body>
-    <!-- --========================================================================================================-- -->
-    <!-- Cabeçalho - Logo e Abas -->
+    <!-- Cabeçalho -->
     <header class="cabecalho">
-        <img src="../Assets/Images/logo-home.png" alt="Logo AboutSongs" class="logo">
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="./PageLogin.html">Entrar</a></li>
-                <li><a href="./PageLogin.html">Cadastrar</a></li>
-                <li><a href="./AbaMusicAlbum.html">Músicas</a></li>
-                <li><a href="./AbaMusicAlbum.html">Álbuns</a></li>
-                <li><a href="./AbaFavorites.html">Favoritos</a></li>
-                <div class="search-bar">
-                    <i class="fas fa-search"></i>
-                    <input class="search" type="search" name="search" placeholder="Pesquisar.">
-                </div>
-            </ul>
-        </nav>
+        <!-- Conteúdo principal do cabeçalho -->
+        <div class="c-content">
+            <img src="../Assets/Images/logo-home.png" alt="Logo do site - AboutSongs">
+            <nav class="nav-bar">
+                <ul class="abas">
+                    <li><a href="#">Músicas</a></li>
+                    <li><a href="#">Álbuns</a></li>
+                    <li><a href="#">Favoritos</a></li>
+                    <div class="pesquisa">
+                        <i class="fas fa-search"></i>
+                        <input class="search" type="search" name="search" id="search" placeholder="Pesquisar.">
+                    </div>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Botão de login do cabeçalho -->
+        <div class="c-login">
+            <a href="#">Login</a>
+        </div>
     </header>
 
-    <!-- --========================================================================================================-- -->
-    <!-- Página Completa -->
+    <!-- Página -->
     <main class="page">
-        <!-- --========================================================================================================-- -->
-        <!-- Seção de Novidades -->
-        <section id="home" class="inicio">
+        <!-- Section da imagem principal -->
+        <section class="inicio" id="home">
             <img class="banner" src="../Assets/Images/aboutsong-sh.png" alt="">
         </section>
 
-        <!-- --========================================================================================================-- -->
-        <!-- Seção de Músicas e Álbuns mais populares -->
-        <section id="musics" class="mais-populares">
-            <h1 class="title">Mais populares</h1>
-            <div class="cards">
-                <a href="PageAlbum.html">
-                    <div class="c-img">
-                        <img src="../Assets/Images/albuns/1.png" alt="">
-                        <div class="text">
-                            <h2 class="c-title">Utopia</h2>
-                            <p class="c-designation">Album</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="PageAlbum.html">
-                    <div class="c-img">
-                        <img src="../Assets/Images/albuns/2.png" alt="">
-                        <div class="text">
-                            <h2 class="c-title">Graduation</h2>
-                            <p class="c-designation">Album</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="PageAlbum.html">
-                    <div class="c-img">
-                        <img src="../Assets/Images/albuns/ye_.jpg" alt="">
-                        <div class="text">
-                            <h2 class="c-title">Ye</h2>
-                            <p class="c-designation">Album</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="PageMusic.html">
-                    <div class="c-img">
-                        <img src="../Assets/Images/albuns/5.png" alt="">
-                        <div class="text">
-                            <h2 class="c-title">The life of Pablo</h2>
-                            <p class="c-designation">Single</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="PageMusic.html">
-                    <div class="c-img">
-                        <img src="../Assets/Images/albuns/7.png" alt="">
-                        <div class="text">
-                            <h2 class="c-title">For all dogs</h2>
-                            <p class="c-designation">Single</p>
-                        </div>
-                    </div>
-                </a>
+        <!-- Section de apresentação -->
+        <section class="sobre" id="about">
+            <div class="b-content">
+                <i class=""></i>
+                <hr>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur dolorem sint eligendi </p>
             </div>
-        </section>
-
-        <!-- --========================================================================================================-- -->
-        <!-- Seção de Mais Músicas e Álbuns -->
-        <section id="mmusicas" class="mais-musicas">
-            <div class="superiores">
-                <h1 class="title-s">Diga o que acha...</h1>
-                <h1 class="see-more">Ver mais</h1>
+            <div class="b-content">
+                <i class=""></i>
+                <hr>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur dolorem sint eligendi </p>
             </div>
-            <div class="cards">
-                <a href="PageAlbum.html">
-                    <div class="c-img">
-                        <img src="../Assets/Images/albuns/atp2.jpg" alt="">
-                        <div class="text">
-                            <h2 class="c-title">Adeus Tokyo Part II</h2>
-                            <p class="c-designation">Album</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="PageAlbum.html">
-                    <div class="c-img">
-                        <img src="../Assets/Images/albuns/ye_.jpg" alt="">
-                        <div class="text">
-                            <h2 class="c-title">Ye</h2>
-                            <p class="c-designation">Album</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="PageAlbum.html">
-                    <div class="c-img">
-                        <img src="../Assets/Images/albuns/mbdtf.jpg" alt="">
-                        <div class="text">
-                            <h2 class="c-title">My Beautiful Dark Twisted Fantasy</h2>
-                            <p class="c-designation">Album</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="PageAlbum.html">
-                    <div class="c-img">
-                        <img src="../Assets/Images/albuns/ye_.jpg" alt="">
-                        <div class="text">
-                            <h2 class="c-title">My Beautiful Dark Twisted Fantasy</h2>
-                            <p class="c-designation">Album</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="PageAlbum.html">
-                    <div class="c-img">
-                        <img src="../Assets/Images/albuns/mbdtf.jpg" alt="">
-                        <div class="text">
-                            <h2 class="c-title">My Beautiful Dark Twisted Fantasy</h2>
-                            <p class="c-designation">Album</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="PageAlbum.html">
-                    <div class="c-img">
-                        <img src="../Assets/Images/albuns/atp2.jpg" alt="">
-                        <div class="text">
-                            <h2 class="c-title">My Beautiful Dark Twisted Fantasy</h2>
-                            <p class="c-designation">Album</p>
-                        </div>
-                    </div>
-                </a>
+            <div class="b-content">
+                <i class=""></i>
+                <hr>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur dolorem sint eligendi </p>
             </div>
-        </section>
-
-        <!-- --========================================================================================================-- -->
-        <!-- Seção de Comentários -->
-        <section id="comments" class="criticas-mais-vistas">
-            <div class="superior">
-                <h2 class="title">Comentários</h2>
-                <div class="line"></div>
-            </div>
-            <div class="exibicao-c">
-                <div class="comentario">
-                    <div class="referencia">
-                        <img src="../Assets/Images/albuns/mbdtf.jpg" alt="">
-                        <h3 class="music-album">My Beautiful Dark Twisted Fantasy</h3>
-                    </div>
-                    <div class="exibicao-u">
-                        <div class="user">
-                            <img src="../Assets/Images/albuns/1.png" alt="">
-                            <h2 class="name">nome de usuário</h2>
-                        </div>
-                        <div class="critica">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem repudiandae error
-                                cupiditate labore veritatis explicabo, officiis accusantium non optio ut nihil deserunt
-                                unde soluta quis quaerat quas aperiam tempore. Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit. Unde, dicta earum autem vero molestias eum corporis
-                                expedita maxime officiis ab, nisi, libero nulla fugiat quo repellat eos aspernatur
-                                obcaecati. Qui.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="comentario">
-                    <div class="referencia">
-                        <img src="../Assets/Images/albuns/ye_.jpg" alt="">
-                        <h3 class="music-album">ye</h3>
-                    </div>
-                    <div class="exibicao-u">
-                        <div class="user">
-                            <img src="../Assets/Images/albuns/1.png" alt="">
-                            <h2 class="name">nome de usuário</h2>
-                        </div>
-                        <div class="critica">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem repudiandae error
-                                cupiditate labore veritatis explicabo, officiis accusantium non optio ut nihil deserunt
-                                unde soluta quis quaerat quas aperiam tempore. Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit. Unde, dicta earum autem vero molestias eum corporis
-                                expedita maxime officiis ab, nisi, libero nulla fugiat quo repellat eos aspernatur
-                                obcaecati. Qui.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="comentario">
-                    <div class="referencia">
-                        <img src="../Assets/Images/albuns/atp2.jpg" alt="">
-                        <h3 class="music-album">Adeus Tokyo Part II</h3>
-                    </div>
-                    <div class="exibicao-u">
-                        <div class="user">
-                            <img src="../Assets/Images/albuns/1.png" alt="">
-                            <h2 class="name">nome de usuário</h2>
-                        </div>
-                        <div class="critica">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem repudiandae error
-                                cupiditate labore veritatis explicabo, officiis accusantium non optio ut nihil deserunt
-                                unde soluta quis quaerat quas aperiam tempore. Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit. Unde, dicta earum autem vero molestias eum corporis
-                                expedita maxime officiis ab, nisi, libero nulla fugiat quo repellat eos aspernatur
-                                obcaecati. Qui.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="ver-mais">
-                    <h2>Ver mais</h2>
-                </div>
         </section>
 
         <!-- --========================================================================================================-- -->
