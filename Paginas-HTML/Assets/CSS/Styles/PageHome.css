@@ -20,12 +20,26 @@
     height: auto;
     display: flex;
     justify-content: center;
+    position: relative;
 
     & .banner {
         width: 100%;
         height: 100%;
 
         object-fit: contain;
+    }
+
+    & .dj {
+        width: 505px;
+
+        height: auto;
+        position: absolute;
+
+        top: 27%;
+        right: 34%;
+
+        animation: animacaoDJ 4s ease-in-out infinite;
+        filter: drop-shadow(0 0 15px #000000);
     }
 }
 
@@ -38,24 +52,25 @@
 
     & .hr-1 {
         width: 45%;
-        height: .5px;
-        background-color: #616161;
+        height: .25px;
+        background-color: #61616159;
     }
 }
 
 /* Apresentação do site */
 .sobre {
     width: 100%;
+    max-width: 1050px;
     height: auto;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    gap: 4px;
+    gap: 2.5px;
 
     & .b-content {
-        width: 29%;
+        width: 34%;
         height: 210px;
 
         background-color: #1a1a1a;
@@ -65,12 +80,14 @@
         justify-content: center;
 
         padding: 10px;
-        gap: 25px;
+        gap: 23px;
 
         cursor: default;
 
+        animation: aparecer 1s ease-in-out;
+
         & i {
-            font-size: 32pt;
+            font-size: 29pt;
             opacity: .8;
             color: #cecece;
             transition: all .5s ease-out;
@@ -79,7 +96,7 @@
         & hr {
             width: 1px;
             height: 75%;
-            background-color: #616161;
+            background-color: #61616159;
         }
 
         & .b-text {
@@ -91,13 +108,13 @@
             flex-direction: column;
 
             & h1 {
-                font-size: 19px;
+                font-size: 16px;
                 color: var(--cor-t-lvl-01);
                 font-weight: 600;
             }
 
             & p {
-                font-size: 16px;
+                font-size: 15px;
                 color: var(--cor-t-lvl-02);
                 font-weight: 400;
             }
@@ -131,19 +148,20 @@
     height: auto;
     display: flex;
     justify-content: center;
-    padding: 0 0 55px 0;
+    padding: 0 0 25px 0;
 
     & .hr-2 {
-        width: 75%;
-        height: .5px;
-        background-color: #616161;
+        width: 70%;
+        height: .25px;
+        background-color: #61616159;
+        border-radius: 10px;
     }
 }
 
 .pop-songs,
 .rest-songs {
     width: 100%;
-    max-width: 1500px;
+    max-width: 1225px;
     height: 450px;
     display: flex;
     flex-direction: column;
@@ -156,7 +174,7 @@
         font-size: 19px;
         color: var(--cor-t-lvl-01);
         font-weight: 600;
-        margin-left: 65px;
+        margin-left: 5px;
     }
 
     & .pop-cards,
@@ -166,11 +184,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 3.5px;
+        gap: 1.5px;
         transition: transform 0.5s ease;
+        animation: aparecer 2s ease-in;
 
         & .card {
-            width: 275px;
+            width: 255px;
             height: 390px;
             display: flex;
             justify-content: center;
@@ -208,7 +227,7 @@
 
                         &:hover {
                             color: #cc01ff;
-                            text-shadow: 0 0 10px #a900d3;
+                            text-shadow: 0 0 10px #cc00ff6c;
                             transition: all .3s ease-in;
                         }
                     }
@@ -218,15 +237,13 @@
             & .infos {
                 width: 100%;
                 height: 85px;
-                padding: 0 0 0 35px;
+                padding: 0 0 0 20px;
                 display: flex;
                 flex-direction: column;
                 justify-content: start;
                 padding-bottom: 10px;
 
-                .infos h1,
-                .infos h2,
-                .infos p {
+                & h1, h2, p {
                     overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
@@ -267,7 +284,7 @@
                 display: flex;
                 justify-content: start;
                 align-items: center;
-                margin-left: 67px;
+                margin-left: 40px;
                 gap: 3.5px;
 
                 & .p {
@@ -320,4 +337,27 @@
 
 }
 
-/* --========================================================================================================-- */
+/* Animações */
+@keyframes animacaoDJ {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

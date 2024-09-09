@@ -33,80 +33,14 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--cor-fundo);
+    background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--cor-02-f1);
+    background-color: #292929;
     border-radius: 15px;
-    border: 3px solid transparent;
-}
-
-/* Botões de Scrollagem */
-.btn-scroll {
-    position: fixed;
-    z-index: 10000;
-    width: 60px;
-    height: 225px;
-    padding-top: 10px;
-    display: block;
-    right: 27px;
-    bottom: 35px;
-    background-color: #00000067;
-    box-shadow: 0 2px 5px black;
-    border-radius: 40px;
-
-    & ul {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 15px;
-
-        & li a img {
-            width: 22.5px;
-            height: 22.5px;
-            filter: invert(0.8);
-            transition: all .3s ease-out;
-
-            &:hover {
-                filter: invert(1);
-                transform: scale(1.04);
-                transition: all .3s ease-in;
-            }
-        }
-
-        .b-voltar {
-            max-width: 40px;
-            width: 40px;
-            height: 40px;
-            border-radius: 100%;
-            background-color: var(--cor-01-r);
-            box-shadow: 0 2px 5px black;
-            transition: all .55s ease-out;
-            z-index: 1000;
-
-            & a {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                & img {
-                    width: 16px;
-                    height: 20px;
-                }
-            }
-
-            &:hover {
-                transform: scale(1.07);
-                transition: all .55s ease-in;
-            }
-        }
-    }
+    border: 3px solid #000000;
+    padding: 10px;
 }
 
 .cabecalho {
@@ -117,6 +51,7 @@ a {
     background: linear-gradient(#000000, #00000000);
 
     display: flex;
+    z-index: 1;
 
 
     & .c-content {
