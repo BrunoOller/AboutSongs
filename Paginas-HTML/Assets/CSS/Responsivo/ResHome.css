@@ -1,0 +1,48 @@
+@media (max-width: 1200px) {
+    .card-container {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 992px) {
+    .card-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        flex: 1 0 30%;
+        min-width: 250px;
+    }
+
+    .pop-songs .p-title {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 0 45%;
+        min-width: 200px;
+    }
+
+    .pop-songs .p-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        flex: 1 0 100%;
+        min-width: 100%;
+    }
+
+    .pop-songs .p-title {
+        font-size: 14px;
+    }
+
+    .nav-btn {
+        padding: 15px 5px;
+    }
+}

@@ -21,6 +21,7 @@
     display: flex;
     justify-content: center;
     position: relative;
+    margin-top: 35px;
 
     & .banner {
         width: 100%;
@@ -158,183 +159,213 @@
     }
 }
 
-.pop-songs,
-.rest-songs {
-    width: 100%;
-    max-width: 1225px;
-    height: 450px;
+.pop-songs {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 15px;
+    gap: 10px;
 
-    & .title {
-        width: 80%;
-        height: 20px;
-        font-size: 19px;
-        color: var(--cor-t-lvl-01);
-        font-weight: 600;
-        margin-left: 5px;
+    & .p-title {
+        font-size: 20px;
+        margin-left: 55px;
+        width: 225px;
     }
 
-    & .pop-cards,
-    .rest-cards {
-        width: 100%;
-        height: 430px;
+    & .music-section {
         display: flex;
-        justify-content: center;
         align-items: center;
-        gap: 1.5px;
-        transition: transform 0.5s ease;
-        animation: aparecer 2s ease-in;
+        position: relative;
 
-        & .card {
-            width: 255px;
-            height: 390px;
+        & .card-wrapper {
+            width: 1280px;
+            overflow: hidden;
+        }
+
+        & .card-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background-color: #1a1a1a;
+            transition: transform 0.35s ease-in-out;
+            gap: 5px;
 
-            & .visual {
-                width: 100%;
-                height: 255px;
+            & .card {
+                flex: 1 0 19.75%;
+                min-width: 200px;
+                height: auto;
+                background-color: #1a1a1a;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
-                & .capa {
-                    width: 210px;
-                    height: 210px;
-                    border-radius: 7px;
-                    box-shadow: 0 0 15px #0000006c;
-                    filter: saturate(1.5);
-                }
-
-                & .icon-b {
-                    position: absolute;
-                    margin-left: 180px;
-                    margin-top: 180px;
-
-                    & i {
-                        color: #f0f0f0;
-                        font-size: 40pt;
-                        text-shadow: 0 0 10px #8686866b;
-                        background-color: #000000;
-                        border-radius: 50%;
-                        transition: all .3s ease-out;
-
-                        &:hover {
-                            color: #cc01ff;
-                            text-shadow: 0 0 10px #cc00ff6c;
-                            transition: all .3s ease-in;
-                        }
-                    }
-                }
-            }
-
-            & .infos {
-                width: 100%;
-                height: 85px;
-                padding: 0 0 0 20px;
-                display: flex;
                 flex-direction: column;
-                justify-content: start;
-                padding-bottom: 10px;
+                position: relative;
+                box-sizing: border-box;
 
-                & h1, h2, p {
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    cursor: default;
-                }
-
-                & h1 {
-                    font-size: 18.5px;
-                    color: var(--cor-t-lvl-01);
-                    font-weight: 600;
-                    width: 205px;
-                }
-
-                & h2 {
-                    font-size: 15.5px;
-                    font-weight: 400;
-                    color: #b1b1b1;
-                    width: 205px;
-                }
-
-                & p {
-                    font-size: 14.5px;
-                    font-weight: 400;
-                    color: #6e6e6e;
-                    width: 205px;
-                }
-            }
-
-            & .line-c {
-                width: 200px;
-                height: .5px;
-                background-color: #61616159;
-            }
-
-            & .plataformas {
-                width: 100%;
-                height: 80px;
-                display: flex;
-                justify-content: start;
-                align-items: center;
-                margin-left: 40px;
-                gap: 3.5px;
-
-                & .p {
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 10.5px;
-
+                & .visual {
+                    width: 100%;
+                    height: 255px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
 
-                    background: #131313;
-                    border: 1px solid #2c2c2c;
-                    box-shadow: 0 0 5px #0000006c;
+                    & .capa {
+                        width: 100%;
+                        height: auto;
+                        max-width: 210px;
+                        max-height: 210px;
+                        border-radius: 7px;
+                        box-shadow: 0 0 15px #0000006c;
+                        filter: saturate(1.5);
+                    }
+
+                    & .icon-b {
+                        position: absolute;
+                        margin-left: 180px;
+                        margin-top: 180px;
+
+                        & i {
+                            color: #f0f0f0;
+                            font-size: 40pt;
+                            text-shadow: 0 0 10px #8686866b;
+                            background-color: #000000;
+                            border-radius: 50%;
+                            transition: all .3s ease-out;
+
+                            &:hover {
+                                color: #cc01ff;
+                                text-shadow: 0 0 10px #cc00ff6c;
+                                transition: all .3s ease-in;
+                            }
+                        }
+                    }
                 }
 
-                & .p:hover .i-spotify {
-                    color: #00f100;
-                    text-shadow: 0 0 10px #019201;
-                    transition: all .3s ease-in;
+                & .infos {
+                    width: 100%;
+                    padding: 0 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    padding-bottom: 10px;
+
+                    & h1,
+                    h2,
+                    p {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        cursor: default;
+                    }
+
+                    & h1 {
+                        font-size: 18.5px;
+                        color: var(--cor-t-lvl-01);
+                        font-weight: 600;
+                        width: 205px;
+                    }
+
+                    & h2 {
+                        font-size: 15.5px;
+                        font-weight: 400;
+                        color: #b1b1b1;
+                        width: 205px;
+                    }
+
+                    & p {
+                        font-size: 14.5px;
+                        font-weight: 400;
+                        color: #6e6e6e;
+                        width: 205px;
+                    }
                 }
 
-                & .p:hover .i-youtube {
-                    color: #f10000;
-                    text-shadow: 0 0 10px #920101;
-                    transition: all .3s ease-in;
+                & .line-c {
+                    width: 200px;
+                    height: .5px;
+                    background-color: #61616159;
                 }
 
-                & .p:hover .i-apple {
-                    color: #ffffff;
-                    text-shadow: 0 0 10px #d6d6d6;
-                    transition: all .3s ease-in;
-                }
+                & .plataformas {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    margin-left: 40px;
+                    gap: 3.5px;
+                    padding: 8px;
 
-                & .p:hover .i-deezer {
-                    color: #cc01ff;
-                    text-shadow: 0 0 10px #8900ac;
-                    transition: all .3s ease-in;
-                }
+                    & .p {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 10.5px;
 
-                & i {
-                    color: #868686;
-                    font-size: 20pt;
-                    transition: all .3s ease-out;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        background: #131313;
+                        border: 1px solid #2c2c2c;
+                        box-shadow: 0 0 5px #0000006c;
+                    }
+
+                    & .p:hover .i-spotify {
+                        color: #00f100;
+                        text-shadow: 0 0 10px #019201;
+                        transition: all .3s ease-in;
+                    }
+
+                    & .p:hover .i-youtube {
+                        color: #f10000;
+                        text-shadow: 0 0 10px #920101;
+                        transition: all .3s ease-in;
+                    }
+
+                    & .p:hover .i-apple {
+                        color: #ffffff;
+                        text-shadow: 0 0 10px #d6d6d6;
+                        transition: all .3s ease-in;
+                    }
+
+                    & .p:hover .i-deezer {
+                        color: #cc01ff;
+                        text-shadow: 0 0 10px #8900ac;
+                        transition: all .3s ease-in;
+                    }
+
+                    & i {
+                        color: #868686;
+                        font-size: 20pt;
+                        transition: all .3s ease-out;
+                    }
                 }
             }
+        }
 
+        & .nav-btn {
+            padding: 30px 15px;
+            border: none;
+            background-color: #00000000;
+            cursor: pointer;
+
+            & i {
+                font-size: 18pt;
+                color: #919191;
+                transition: all .3s ease-out;
+            }
+
+            &:hover i {
+                color: #cc00ff;
+                transition: all .3s ease-in;
+            }
+        }
+
+        & .nav-btn:disabled {
+            background-color: #00000000;
+            cursor: default;
+
+            & i {
+                font-size: 18pt;
+                color: #00000000;
+            }
         }
     }
-
 }
 
 /* Animações */
@@ -342,9 +373,11 @@
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(50px);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -354,9 +387,11 @@
     0% {
         opacity: 0;
     }
+
     25% {
         transform: translateY(20px);
     }
+
     100% {
         transform: scale(1);
     }
