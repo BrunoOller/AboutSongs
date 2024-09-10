@@ -30,22 +30,28 @@
 
 <body>
     <!-- --========================================================================================================-- -->
-    <!-- Cabeçalho - Logo e Abas -->
+    <!-- Cabeçalho -->
     <header class="cabecalho">
-        <img src="../Assets/Images/logo-home.png" alt="Logo AboutSongs" class="logo">
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="./PageLogin.html">Entrar</a></li>
-                <li><a href="./PageLogin.html">Cadastrar</a></li>
-                <li><a href="./AbaMusicAlbum.html">Músicas</a></li>
-                <li><a href="./AbaMusicAlbum.html">Álbuns</a></li>
-                <li><a href="./AbaFavorites.html">Favoritos</a></li>
-                <div class="search-bar">
-                    <i class="fas fa-search"></i>
-                    <input class="search" type="search" name="search" placeholder="Pesquisar.">
-                </div>
-            </ul>
-        </nav>
+        <!-- Conteúdo principal do cabeçalho -->
+        <div class="c-content">
+            <img src="../Assets/Images/logo-home.png" alt="Logo do site - AboutSongs">
+            <nav class="nav-bar">
+                <ul class="abas">
+                    <li><a href="#">Músicas</a></li>
+                    <li><a href="#">Álbuns</a></li>
+                    <li><a href="#">Favoritos</a></li>
+                    <div class="pesquisa">
+                        <i class="fas fa-search"></i>
+                        <input class="search" type="search" name="search" id="search" placeholder="Pesquisar.">
+                    </div>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Botão de login do cabeçalho -->
+        <div class="c-login">
+            <a href="#">Login</a>
+        </div>
     </header>
 
     <main class="page">
@@ -53,7 +59,7 @@
             <img src="../Assets/Images/albuns/mbdtf.jpg" alt="" class="album">
             <div class="infos">
                 <h3 class="categoria">Album</h3>
-                <h1 class="n-album" id="n-album">My Beautiful Dark Twisted Fantasy</h1>
+                <h1 class="n-album" id="name-album">My Beautiful Dark Twisted Fantasy</h1>
                 <h2 class="n-artist">Kanye West</h2>
             </div>
         </section>
@@ -126,8 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="comentario">
-                    <div class="referencia">
+                <div class="comentario">                                                        <div class="referencia">
                         <img src="../Assets/Images/modelo.png" alt="">
                         <h3 class="music-album">música/álbum</h3>
                     </div>
@@ -185,7 +190,7 @@
             </ul>
         </div>
     </main>
-    <script src="../Assets/JS/header.js"></script>
+
     <script src="../Assets/JS/text.js"></script>
 </body>
 
