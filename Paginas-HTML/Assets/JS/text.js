@@ -1,13 +1,14 @@
-function adjustAlbumTitleFontSize() {
-  const title = document.getElementById('name-album');
-  const maxFontSize = 60; // Máximo de 60px
-  const minFontSize = 24; // Mínimo de 24px
-  const screenWidth = window.innerWidth;
-  const newFontSize = Math.max(minFontSize, Math.min(maxFontSize, screenWidth / 20)); // Ajuste conforme necessário
+window.addEventListener('load', adjustFontSize);
+window.addEventListener('resize', adjustFontSize);
 
-  title.style.fontSize = `${newFontSize}px`;
+function adjustFontSize() {
+    const albumName = document.getElementById('name-album');
+    let fontSize = 60; // Tamanho inicial da fonte
+    albumName.style.fontSize = `${fontSize}px`;
+
+    // Reduz o tamanho da fonte enquanto o título não caber na largura
+    while (albumName.scrollWidth > albumName.offsetWidth && fontSize > 10) {
+        fontSize--;
+        albumName.style.fontSize = `${fontSize}px`;
+    }
 }
-
-// Chama a função ao carregar a página e ao redimensionar a janela
-window.addEventListener('load', adjustAlbumTitleFontSize);
-window.addEventListener('resize', adjustAlbumTitleFontSize);
