@@ -323,12 +323,6 @@
                         transition: all .3s ease-in;
                     }
 
-                    & .p:hover .i-deezer {
-                        color: #cc01ff;
-                        text-shadow: 0 0 10px #8900ac;
-                        transition: all .3s ease-in;
-                    }
-
                     & i {
                         color: #868686;
                         font-size: 20pt;

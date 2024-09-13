@@ -57,6 +57,53 @@
         padding-left: 50px;
         z-index: 10;
 
+        & .plataformas {
+            width: auto;
+            height: auto;
+            display: flex;
+            position: absolute;
+            gap: 3.5px;
+            top: 15%;
+            right: 22%;
+
+            & .p {
+                width: 45px;
+                height: 45px;
+                border-radius: 2px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                background: #1a1a1a;
+                box-shadow: 0 0 5px #0000006c;
+            }
+
+            & .p:hover .i-spotify {
+                color: #00f100;
+                text-shadow: 0 0 10px #019201;
+                transition: all .3s ease-in;
+            }
+
+            & .p:hover .i-youtube {
+                color: #f10000;
+                text-shadow: 0 0 10px #920101;
+                transition: all .3s ease-in;
+            }
+
+            & .p:hover .i-apple {
+                color: #ffffff;
+                text-shadow: 0 0 10px #d6d6d6;
+                transition: all .3s ease-in;
+            }
+
+            & i {
+                color: #989898;
+                font-size: 17pt;
+                transition: all .3s ease-out;
+            }
+        }
+
         /* --========================================================================================================-- */
         & .categoria {
             font-size: 17px;
@@ -87,104 +134,34 @@
 
 
 /* --========================================================================================================-- */
-/* Informações do Álbum */
-.album-info {
-    max-width: 1100px;
-    width: 100%;
-    max-height: 550px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    gap: 10px;
 
-    & .curiosidade {
-        width: 60%;
-        height: 100%;
-        padding: 30px 0 30px 0;
 
-        /* --========================================================================================================-- */
-        & h2 {
-            width: 100%;
-            height: 20px;
-            font-size: 18.5px;
-            color: var(--cor-t-lvl-01);
-            cursor: default;
-        }
+.curiosidade {
+    width: 60%;
+    height: 100%;
+    padding: 30px 0 30px 0;
 
-        /* --========================================================================================================-- */
-        & p {
-            width: 80%;
-            height: auto;
-            text-align: start;
-            font-size: 16px;
-            margin-top: 16px;
-            color: var(--cor-t-lvl-02);
-            cursor: default;
-        }
+    /* --========================================================================================================-- */
+    & h2 {
+        width: 100%;
+        height: 20px;
+        font-size: 18.5px;
+        color: var(--cor-t-lvl-01);
+        cursor: default;
     }
 
-    & .dados {
-        width: 40%;
-        min-height: 200px;
-        height: 450px;
-        padding: 30px 0 30px 0;
-        background-color: #575757;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border-radius: 7px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.568);
-        gap: 20px;
-
-        & .g-album {
-            width: 90%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2.5px;
-
-            & button {
-                width: 120px;
-                height: 30px;
-                background-color: #3d3d3d6b;
-            }
-        }
-
-        & .plataformas {
-            width: 90%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 3.5px;
-
-            & a {
-                width: 95px;
-                height: 95px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: 1px solid rgba(0, 0, 0, 0.589);
-                background-color: #3d3d3d6b;
-                border-radius: 7px;
-                box-shadow: 0 0 5px rgba(0, 0, 0, 0.719);
-                transition: all .35s ease-out;
-
-                & i {
-                    font-size: 30pt;
-                }
-
-                &:hover {
-                    background-color: rgba(0, 0, 0, 0.712);
-                    transition: all .35s ease-in;
-                }
-            }
-        }
+    /* --========================================================================================================-- */
+    & p {
+        width: 80%;
+        height: auto;
+        text-align: start;
+        font-size: 16px;
+        margin-top: 16px;
+        color: var(--cor-t-lvl-02);
+        cursor: default;
     }
 }
+
 
 /* --========================================================================================================-- */
 /* Músicas que fazem parte do Álbum */
