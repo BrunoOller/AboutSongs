@@ -48,7 +48,7 @@
     /* --========================================================================================================-- */
     & .infos {
         max-width: 750px;
-        min-width: 750px;
+        min-width: 450px;
         height: 250px;
         display: flex;
         justify-content: center;
@@ -57,57 +57,34 @@
         padding-left: 50px;
         z-index: 10;
 
-        & .plataformas {
-            width: auto;
-            height: auto;
+        & .duracao {
+            width: 102px;
+            height: 37px;
+
             display: flex;
-            position: absolute;
-            gap: 2px;
-            top: 25%;
-            right: 22%;
+            justify-content: center;
+            align-items: center;
 
-            & .p {
-                width: 42px;
-                height: 42px;
-                border-radius: 2px;
+            gap: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            background-color: #161616;
 
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                background: #0f0f0f;
-                box-shadow: 0 0 5px #0000006c;
-                border: .5px solid #3b3b3b;
-                transition: all .3s ease-out;
-
-                &:hover {
-                    background-color: #000000;
-                    transition: all .3s ease-in;
-                }
+            & .icon-t {
+                color: #cc01ff;
+                font-size: 13pt;
             }
 
-            & .p:hover .i-spotify {
-                color: #00f100;
-                text-shadow: 0 0 10px #019201;
-                transition: all .3s ease-in;
+            & .tempo {
+                color: #b1b1b1;
+                cursor: default;
+                transition: all .35s ease-out;
             }
 
-            & .p:hover .i-youtube {
-                color: #f10000;
-                text-shadow: 0 0 10px #920101;
-                transition: all .3s ease-in;
-            }
-
-            & .p:hover .i-apple {
-                color: #ffffff;
-                text-shadow: 0 0 10px #d6d6d6;
-                transition: all .3s ease-in;
-            }
-
-            & i {
-                color: #989898;
-                font-size: 17pt;
-                transition: all .3s ease-out;
+            &:hover .tempo {
+                color: #f1f1f1;
+                text-decoration: underline;
+                transition: all .35s ease-in;
             }
         }
 
@@ -208,7 +185,7 @@
                 }
 
                 & .icon {
-                    width:150px;
+                    width: 150px;
                     height: 65px;
                     background-color: #53535349;
                     font-size: 26pt;

@@ -21,7 +21,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    margin-top: 35px;
+    margin-top: 65px;
 
     & .banner {
         width: 100%;
