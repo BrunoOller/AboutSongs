@@ -21,7 +21,6 @@
     display: flex;
     justify-content: center;
     position: relative;
-    margin-top: 65px;
 
     & .banner {
         width: 100%;
@@ -36,8 +35,8 @@
         height: auto;
         position: absolute;
 
-        top: 27%;
-        right: 34%;
+        top: 47%;
+        right: 14%;
 
         animation: animacaoDJ 4s ease-in-out infinite;
         filter: drop-shadow(0 0 15px #000000);
