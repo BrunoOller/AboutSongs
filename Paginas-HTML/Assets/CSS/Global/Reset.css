@@ -52,15 +52,15 @@ a {
     align-items: center;
 
     position: absolute;
-    z-index: 1;
+    z-index: 10;
 
     padding-top: 20px;
 
-    background: linear-gradient(#000000 45%, #00000000 100%);
+    background: linear-gradient(#000000 35%, #00000000 100%);
     gap: 45px;
 
     & .h-logo {
-        width: 318px;
+        width: 275px;
         height: auto;
 
         filter: drop-shadow(0 0 10px #000000a6);
