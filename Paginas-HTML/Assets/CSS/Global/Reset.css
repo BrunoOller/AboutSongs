@@ -104,6 +104,70 @@ a {
     }
 }
 
+@media (max-width: 1230px) {
+    .cabecalho {
+        width: 100%;
+
+        padding-top: 19px;
+
+        background: linear-gradient(#000000 33%, #00000000 100%);
+        gap: 42px;
+
+        & .h-logo {
+            width: 260px;
+            height: auto;
+
+            filter: drop-shadow(0 0 10px #00000088);
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .cabecalho {
+        width: 100%;
+
+        padding-top: 15px;
+
+        background: linear-gradient(#000000 33%, #00000000 100%);
+        gap: 39px;
+
+        & .h-logo {
+            width: 225px;
+            height: auto;
+
+            filter: drop-shadow(0 0 10px #00000088);
+        }
+
+        & ul {
+            width: 300px;
+            height: auto;
+
+            gap: 1.5px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & li a {
+                color: #dfdfdf;
+                border-bottom: 2px solid #cc01ff00;
+                padding: 7px 10px;
+                transition: all .35s ease-out;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 11.5px;
+
+                &:hover {
+                    color: #ffffff;
+                    border-bottom: 2px solid #cc01ff;
+                    transition: all .35s ease-in;
+                }
+            }
+        }
+    }
+}
+
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
