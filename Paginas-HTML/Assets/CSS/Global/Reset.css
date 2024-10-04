@@ -60,10 +60,19 @@ a {
     gap: 45px;
 
     & .h-logo {
-        width: 275px;
+        width: 245px;
         height: auto;
+        background-color: #80808000;
+        padding: 10px;
+        border-radius: 7px;
 
+        transition: all .35s ease-out;
         filter: drop-shadow(0 0 10px #000000a6);
+
+        &:hover {
+            background-color: #8080803d;
+            transition: all .25s ease-in;
+        }
     }
 
     & .nav-bar {
@@ -81,23 +90,22 @@ a {
             justify-content: center;
             align-items: center;
 
-            gap: 35px;
-
             border-radius: 15px;
 
             & li a {
                 color: #dfdfdf;
                 border-bottom: 2px solid #cc01ff00;
-                padding: 7px 10px;
+                border-radius: 5px;
+                padding: 15px 25px;
                 transition: all .35s ease-out;
                 text-transform: uppercase;
                 font-weight: 700;
                 font-size: 12.5px;
 
                 &:hover {
-                    color: #ffffff;
-                    border-bottom: 2px solid #cc01ff;
-                    transition: all .35s ease-in;
+                    color: #f8f8f8;
+                    background-color: #8080803d;
+                    transition: all .25s ease-in;
                 }
             }
         }
