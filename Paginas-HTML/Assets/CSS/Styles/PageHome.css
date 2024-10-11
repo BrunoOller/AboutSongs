@@ -86,7 +86,7 @@
         padding: 10px;
         gap: 23px;
 
-        cursor: default;
+        cursor: pointer;
         transition: all .2s ease-out;
 
         animation: aparecer 1s ease-in-out;
