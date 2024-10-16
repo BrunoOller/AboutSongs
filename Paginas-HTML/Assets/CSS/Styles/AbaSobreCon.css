@@ -9,19 +9,94 @@
     gap: 50px;
 }
 
-.s-first {
+.line {
+    width: 45%;
+    height: .5px;
+    background-color: #303030;
+}
+
+.icon-a, .icon-b, .icon-c {
+    color: #808080;
+    text-shadow: 0 0 10px #6b6b6b;
+    font-size: 29pt;
+    position: absolute;
+}
+
+.icon-a {
+    top: 41.5%;
+    left: 23.2%;
+}
+
+.icon-b {
+    top: 85.2%;
+    right: 23.2%;
+}
+
+.icon-c {
+    top: 128.2%;
+    left: 23.2%;
+}
+
+.inicio {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 25px;
+
+    & .banner {
+        width: 55%;
+        height: 100%;
+
+        filter: brightness(85%);
+
+        object-fit: contain;
+    }
+}
+
+.s-first, .s-third {
     width: 1100px;
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    align-items: start;
     gap: 10px;
-    margin-top: 150px;
 
-    & .t-first {
+    & .t-first, .t-third {
         width: 100%;
         height: auto;
-        font-size: 13.5pt;
+        font-size: 12pt;
+    }
+
+    & .text-first, .text-third {
+        width: 40%;
+        height: auto;
+        font-size: 11pt;
+        color: #dddddd;
+    }
+}
+
+.s-second {
+    width: 1100px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+
+    & .t-second {
+        width: 40%;
+        height: auto;
+        font-size: 12pt;
+    }
+
+    & .text-second {
+        width: 40%;
+        height: auto;
+        font-size: 11pt;
+        color: #dddddd;
     }
 }
