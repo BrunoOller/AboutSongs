@@ -60,7 +60,7 @@ a {
     gap: 45px;
 
     & .h-logo {
-        width: 215px;
+        width: 235px;
         height: auto;
         background-color: #80808000;
         padding: 5px;
@@ -173,6 +173,20 @@ a {
             }
         }
     }
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-25%);
+    transition: all 2s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 2s ease-in-out;
 }
 
 

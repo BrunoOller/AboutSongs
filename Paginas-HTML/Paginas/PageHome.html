@@ -27,12 +27,13 @@
     <!-- Cabeçalho -->
     <header class="cabecalho">
         <!-- Conteúdo principal do cabeçalho -->
-        <a href="#"><img class="h-logo" src="../Assets/Images/logo-home.png" alt="Logo do site"></a>
+        <a href="#"><img class="h-logo" src="../Assets/Images/logo-home-.png" alt="Logo do site"></a>
         <nav class="nav-bar">
             <ul>
                 <li><a href="./AbaMusicAlbum.html">Músicas</a></li>
                 <li><a href="./AbaMusicAlbum.html">Álbuns</a></li>
                 <li><a href="./AbaFavorites.html">Favoritos</a></li>
+                <li><a href="./AbaSobreCon.html">Sobre</a></li>
             </ul>
         </nav>
     </header>
@@ -50,8 +51,8 @@
         </div>
 
         <!-- Section de apresentação -->
-        <section class="sobre" id="about">
-            <a href="./AbaSobreCon.html" class="b-content">
+        <section class="hidden sobre" id="about">
+            <a href="./AbaSobreCon.html" class="hidden b-content">
                 <i class="icon-a fa-solid fa-star-half-stroke"></i>
                 <hr>
                 <div class="b-text">
@@ -59,7 +60,7 @@
                     <p>sit amet consectetur adipisicing elit. Pariatur dolorem sint eligendi </p>
                 </div>
             </a>
-            <a href="./AbaSobreCon.html#second" class="b-content">
+            <a href="./AbaSobreCon.html#second" class="hidden b-content">
                 <i class="icon-b fa-solid fa-magnifying-glass"></i>
                 <hr>
                 <div class="b-text">
@@ -67,7 +68,7 @@
                     <p>sit amet consectetur adipisicing elit. Pariatur dolorem sint eligendi </p>
                 </div>
             </a>
-            <a href="./AbaSobreCon.html#third" class="b-content">
+            <a href="./AbaSobreCon.html#third" class="hidden b-content">
                 <i class="icon-c fa-solid fa-circle-info"></i>
                 <hr>
                 <div class="b-text">
@@ -82,7 +83,7 @@
         </div>
 
         <!-- Sections de músicas -->
-        <section class="musicas">
+        <section class="hidden musicas">
             <div class="superior">
                 <h1 class="title-s">Músicas</h1>
                 <a class="all-s" href="./AbaMusicAlbum.html">Ver tudo.</a>
@@ -180,7 +181,8 @@
                 </a>
             </div>
         </section>
-        <section class="albuns">
+
+        <section class="hidden albuns">
             <div class="superior">
                 <h1 class="title-a">Álbuns</h1>
                 <a class="all-a" href="./AbaMusicAlbum.html">Ver tudo.</a>
@@ -279,7 +281,7 @@
             </div>
         </section>
 
-        <section id="comments" class="criticas-mais-vistas">
+        <section id="comments" class="hidden criticas-mais-vistas">
             <div class="superior">
                 <h2 class="title">Comentários</h2>
                 <div class="line"></div>
@@ -316,7 +318,7 @@
 
     <!-- --========================================================================================================-- -->
     <!-- Link JS -->
-    <script src="../Assets/JS/card.js"></script>
+    <script src="../Assets/JS/animation.js"></script>
     <!-- --========================================================================================================-- -->
 </body>
 

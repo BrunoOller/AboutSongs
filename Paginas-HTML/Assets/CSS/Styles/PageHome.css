@@ -153,6 +153,14 @@
     }
 }
 
+.sobre :nth-child(2) {
+    transition-delay: 700ms;
+}
+
+.sobre :nth-child(3) {
+    transition-delay: 1400ms;
+}
+
 .line-2 {
     width: 100%;
     height: auto;
