@@ -54,23 +54,21 @@ a {
     position: absolute;
     z-index: 10;
 
-    padding-top: 20px;
-
-    background: linear-gradient(#000000 35%, #00000000 100%);
+    background: linear-gradient(#000000 55%, #00000000 100%);
     gap: 45px;
 
     & .h-logo {
         width: 235px;
         height: auto;
         background-color: #80808000;
-        padding: 5px;
         border-radius: 1.5px;
+        margin-bottom: 3.5px;
 
         transition: all .35s ease-out;
         filter: drop-shadow(0 0 10px #000000a6);
 
         &:hover {
-            background-color: #8080803d;
+            transform: scale(1.02);
             transition: all .25s ease-in;
         }
     }
@@ -80,7 +78,7 @@ a {
         height: 100%;
 
         display: flex;
-        align-items: end;
+        align-items: center;
 
         & ul {
             width: 450px;
@@ -91,20 +89,21 @@ a {
             align-items: center;
 
             border-radius: 15px;
+            margin-bottom: 8px;
 
             & li a {
                 color: #dfdfdf;
                 border-bottom: 2px solid #cc01ff00;
                 border-radius: 2.5px;
-                padding: 15px 25px;
+                padding: 7px 15px;
                 transition: all .35s ease-out;
                 text-transform: uppercase;
                 font-weight: 700;
                 font-size: 12.5px;
 
                 &:hover {
-                    color: #f8f8f8;
-                    background-color: #8080803d;
+                    color: #000000;
+                    background-color: #e2e2e2;
                     transition: all .25s ease-in;
                 }
             }
@@ -179,14 +178,14 @@ a {
     opacity: 0;
     filter: blur(15px);
     transform: translateX(-25%);
-    transition: all 2s ease-in-out;
+    transition: all 1.7s ease-in-out;
 }
 
 .show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
-    transition: all 2s ease-in-out;
+    transition: all 1.7s ease-in-out;
 }
 
 

@@ -23,8 +23,8 @@
     position: relative;
 
     & .banner {
-        width: 90%;
-        height: 100%;
+        width: 100%;
+        height: 90vh;
 
         filter: brightness(85%);
 
@@ -33,13 +33,13 @@
 
     & .lights {
         width: 100%;
-        height: 100%;
+        height: 90vh;
 
         height: auto;
         position: absolute;
         object-fit: contain;
 
-        top: 5%;
+        top: 7%;
         right: 0;
 
         animation: animacaoLights 10s ease-in-out infinite;
@@ -57,7 +57,7 @@
     & .hr-1 {
         width: 45%;
         height: .25px;
-        background-color: #61616159;
+        background: #46464659;
     }
 }
 
