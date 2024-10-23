@@ -57,21 +57,28 @@ a {
     background: linear-gradient(#000000 55%, #00000000 100%);
     gap: 45px;
 
-    & .h-logo {
-        width: 235px;
-        height: auto;
-        background-color: #80808000;
-        border-radius: 1.5px;
-        margin-bottom: 3.5px;
+    & a {
 
-        transition: all .35s ease-out;
-        filter: drop-shadow(0 0 10px #000000a6);
-
-        &:hover {
-            transform: scale(1.02);
-            transition: all .25s ease-in;
+        & .h-logo {
+            width: 235px;
+            height: auto;
+            background-color: #80808000;
+            border-radius: 1.5px;
+            margin-bottom: 3.5px;
+    
+            transition: all .35s ease-out;
+            filter: drop-shadow(0 0 10px #000000a6);
         }
+
+        &:hover .h-logo {
+            transform: scale(1.025);
+            transition: all .25s ease-in;
+            filter: drop-shadow(0 0 10px #bbbbbba6);
+        }
+
     }
+
+    
 
     & .nav-bar {
         width: auto;

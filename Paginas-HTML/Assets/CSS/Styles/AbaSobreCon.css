@@ -9,34 +9,6 @@
     gap: 50px;
 }
 
-.line {
-    width: 45%;
-    height: .5px;
-    background-color: #303030;
-}
-
-.icon-a, .icon-b, .icon-c {
-    color: #808080;
-    text-shadow: 0 0 10px #6b6b6b;
-    font-size: 29pt;
-    position: absolute;
-}
-
-.icon-a {
-    top: 41.5%;
-    left: 23.2%;
-}
-
-.icon-b {
-    top: 85.2%;
-    right: 23.2%;
-}
-
-.icon-c {
-    top: 128.2%;
-    left: 23.2%;
-}
-
 .inicio {
     width: 100%;
     height: auto;
@@ -62,18 +34,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    gap: 10px;
+    gap: 20px;
 
     & .t-first, .t-third {
         width: 100%;
         height: auto;
-        font-size: 12pt;
+        font-size: 17pt;
     }
 
     & .text-first, .text-third {
         width: 40%;
         height: auto;
-        font-size: 11pt;
+        font-size: 14pt;
         color: #dddddd;
     }
 }
