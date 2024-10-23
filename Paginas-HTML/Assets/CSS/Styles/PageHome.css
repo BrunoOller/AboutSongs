@@ -381,7 +381,7 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            background-color: rgba(29, 29, 29, 0.05);
+            background-color: #1d1d1d0d;
             box-shadow: 0 7px 20px rgba(3, 3, 3, 0.3);
             border-radius: 6px;
             border-bottom: 1px solid rgb(36, 36, 36);

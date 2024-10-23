@@ -45,7 +45,7 @@
     & .text-first, .text-third {
         width: 40%;
         height: auto;
-        font-size: 14pt;
+        font-size: 13pt;
         color: #dddddd;
     }
 }
@@ -62,13 +62,13 @@
     & .t-second {
         width: 40%;
         height: auto;
-        font-size: 12pt;
+        font-size: 17pt;
     }
 
     & .text-second {
         width: 40%;
         height: auto;
-        font-size: 11pt;
+        font-size: 13pt;
         color: #dddddd;
     }
 }
