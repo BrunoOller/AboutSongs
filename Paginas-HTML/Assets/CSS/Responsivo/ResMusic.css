@@ -1,0 +1,193 @@
+@media (max-width: 1300px) {
+
+    .criticas-mais-vistas {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 3.5px;
+        margin-top: 35px;
+        padding-bottom: 15px;
+
+        & .superior {
+            width: 950px;
+            height: auto;
+
+            & .title {
+                font-size: 17px;
+                margin-bottom: 0;
+            }
+
+            & .line {
+                width: 950px;
+                height: .35px;
+            }
+        }
+
+        & .exibicao-c {
+            width: 950px;
+            height: auto;
+
+            & .comentario {
+                width: 100%;
+                height: auto;
+                background-color: #1d1d1d0d;
+
+                & .referencia {
+                    width: 175px;
+                    gap: 4px;
+                    padding: 10px;
+
+                    & img {
+                        width: 125px;
+                        height: 125px;
+                    }
+
+                    & .text {
+                        width: 125px;
+                        height: auto;
+                        border-radius: 6.3px;
+                    }
+
+                    & .c-title {
+                        font-size: 11pt;
+                    }
+
+                    & .c-artist {
+                        font-size: 10pt;
+                    }
+
+                    & .c-designation {
+                        font-size: 8.7pt;
+                    }
+                }
+
+                & .exibicao-u {
+                    width: 775px;
+                    height: auto;
+                    padding: 10px 0;
+
+                    & .user {
+                        width: 705px;
+                        height: auto;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 12px;
+
+                        & img {
+                            width: 50px;
+                            height: 50px;
+                        }
+
+                        & .name {
+                            font-size: 12pt;
+                            font-weight: 600;
+                        }
+                    }
+
+                    & .critica {
+
+                        & p {
+                            width: 88%;
+                            font-size: 10.5pt;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .page {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 1050px) {
+
+    .criticas-mais-vistas {
+        gap: 2.7px;
+        margin-top: 27px;
+        padding-bottom: 15px;
+
+        & .superior {
+            width: 850px;
+
+            & .line {
+                width: 850px;
+            }
+        }
+
+        & .exibicao-c {
+            width: 850px;
+            height: auto;
+
+            & .comentario {
+
+                & .referencia {
+                    width: 180px;
+                    gap: 4px;
+                    padding: 10px;
+
+                    & img {
+                        width: 125px;
+                        height: 125px;
+                    }
+
+                    & .text {
+                        width: 125px;
+                        height: auto;
+                        border-radius: 6.3px;
+                    }
+
+                    & .c-title {
+                        font-size: 11pt;
+                    }
+
+                    & .c-artist {
+                        font-size: 10pt;
+                    }
+
+                    & .c-designation {
+                        font-size: 8.7pt;
+                    }
+                }
+
+                & .exibicao-u {
+                    width: 670px;
+                    height: auto;
+                    padding: 10px 10px;
+
+                    & .user {
+                        width: 605px;
+                        margin-top: 10px;
+
+                        & img {
+                            width: 48px;
+                            height: 48px;
+                        }
+
+                        & .name {
+                            font-size: 11.5pt;
+                            font-weight: 600;
+                        }
+                    }
+
+                    & .critica {
+
+                        & p {
+                            width: 88%;
+                            font-size: 10pt;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .page {
+        gap: 33px;
+    }
+}

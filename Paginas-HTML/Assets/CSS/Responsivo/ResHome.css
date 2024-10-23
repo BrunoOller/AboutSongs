@@ -2,12 +2,7 @@
     .inicio {
 
         & .banner {
-            height: 70vh;
-        }
-
-        & .lights {
-            height: 70vh;
-            top: 3.5%;
+            height: 60vh;
         }
     }
 
@@ -68,7 +63,7 @@
         gap: 10px;
 
         & .superior {
-            width: 73%;
+            width: 950px;
             max-width: 950px;
         }
 
@@ -249,45 +244,201 @@
     }
 }
 
-@media (max-width: 992px) {
-    .card-container {
-        flex-wrap: wrap;
-        justify-content: center;
+@media (max-width: 1050px) {
+    .inicio {
+
+        & .banner {
+            height: 42vh;
+        }
     }
 
-    .card {
-        flex: 1 0 30%;
-        min-width: 250px;
+    .line-1 {
+
+        & .hr-1 {
+            width: 40%;
+            height: .35px;
+        }
     }
 
-    .pop-songs .p-title {
-        font-size: 18px;
-        margin-left: 10px;
-    }
-}
+    .sobre {
+        max-width: 860px;
 
-@media (max-width: 768px) {
-    .card {
-        flex: 1 0 45%;
-        min-width: 200px;
+        & .b-content {
+            padding: 8.5px;
+
+            & i {
+                font-size: 25pt;
+            }
+
+            & hr {
+                height: 60%;
+            }
+
+            & .b-text {
+
+                & h1 {
+                    font-size: 14.5px;
+                }
+
+                & p {
+                    font-size: 13.5px;
+                }
+            }
+        }
     }
 
-    .pop-songs .p-title {
-        font-size: 16px;
-    }
-}
+    .line-2 {
 
-@media (max-width: 576px) {
-    .card {
-        flex: 1 0 100%;
-        min-width: 100%;
+        & .hr-2 {
+            width: 67%;
+            height: .35px;
+        }
     }
 
-    .pop-songs .p-title {
-        font-size: 14px;
+    .musicas,
+    .albuns {
+        height: auto;
+        margin-top: 15px;
+        gap: 10px;
+
+        & .superior {
+            width: 850px;
+            max-width: 850px;
+        }
+
+        & .cards {
+            width: 860px;
+            height: auto;
+            gap: 1px;
+
+            & .c-card {
+                width: 141px;
+                padding: 7px 0;
+                gap: 1.5px;
+
+                & img {
+                    width: 125px;
+                    height: 125px;
+                    margin-right: 3px;
+                }
+
+                & .text {
+                    width: 120px;
+                    margin-left: 7.3px;
+                }
+
+                & .c-title {
+                    font-size: 10.7pt;
+                }
+
+                & .c-artist {
+                    font-size: 9.8pt;
+                }
+
+                & .c-designation {
+                    font-size: 9.5pt;
+                }
+
+                & .plataformas {
+                    width: 65%;
+                    margin-top: 2.5px;
+                    gap: 2.7px;
+
+                    & .p {
+                        width: 26.5px;
+                        height: 26.5px;
+                        padding-right: 3.3px;
+                    }
+
+                    & i {
+                        font-size: 13.5pt;
+                    }
+                }
+            }
+        }
     }
 
-    .nav-btn {
-        padding: 15px 5px;
+    .criticas-mais-vistas {
+        gap: 2.7px;
+        margin-top: 27px;
+        padding-bottom: 15px;
+
+        & .superior {
+            width: 850px;
+
+            & .line {
+                width: 850px;
+            }
+        }
+
+        & .exibicao-c {
+            width: 850px;
+            height: auto;
+
+            & .comentario {
+
+                & .referencia {
+                    width: 180px;
+                    gap: 4px;
+                    padding: 10px;
+
+                    & img {
+                        width: 125px;
+                        height: 125px;
+                    }
+
+                    & .text {
+                        width: 125px;
+                        height: auto;
+                        border-radius: 6.3px;
+                    }
+
+                    & .c-title {
+                        font-size: 11pt;
+                    }
+
+                    & .c-artist {
+                        font-size: 10pt;
+                    }
+
+                    & .c-designation {
+                        font-size: 8.7pt;
+                    }
+                }
+
+                & .exibicao-u {
+                    width: 670px;
+                    height: auto;
+                    padding: 10px 10px;
+
+                    & .user {
+                        width: 605px;
+                        margin-top: 10px;
+
+                        & img {
+                            width: 48px;
+                            height: 48px;
+                        }
+
+                        & .name {
+                            font-size: 11.5pt;
+                            font-weight: 600;
+                        }
+                    }
+
+                    & .critica {
+
+                        & p {
+                            width: 88%;
+                            font-size: 10pt;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .page {
+        gap: 33px;
     }
 }
