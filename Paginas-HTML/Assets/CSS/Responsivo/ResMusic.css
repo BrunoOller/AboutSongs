@@ -1,4 +1,8 @@
 @media (max-width: 1300px) {
+    .informations {
+        width: 100%;
+        max-width: 900px;
+    }
 
     .criticas-mais-vistas {
         width: 100%;

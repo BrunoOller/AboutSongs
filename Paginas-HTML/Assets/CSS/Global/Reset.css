@@ -75,26 +75,20 @@ a {
             transition: all .25s ease-in;
             filter: drop-shadow(0 0 10px #bbbbbba6);
         }
-
     }
-
-
 
     & .nav-bar {
         width: auto;
         height: 100%;
-
         display: flex;
         align-items: center;
 
         & ul {
             width: 450px;
             height: 85px;
-
             display: flex;
             justify-content: center;
             align-items: center;
-
             border-radius: 15px;
             margin-bottom: 8px;
 
@@ -115,6 +109,32 @@ a {
                 }
             }
         }
+    }
+}
+
+.perfil {
+    position: absolute;
+    z-index: 1000;
+    top: 16px;
+    right: 25%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+
+    & .img-perfil {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        filter: brightness(60%);
+        transition: all .25s ease-out;
+    }
+
+    &:hover .img-perfil {
+        filter: brightness(100%);
+        transition: all .25s ease-in;
     }
 }
 
