@@ -1,4 +1,4 @@
-// Exibir o botão ao rolar a página
+// Botão de voltar ao topo
 window.onscroll = function() {
     toggleTopButton();
 };
@@ -6,13 +6,12 @@ window.onscroll = function() {
 function toggleTopButton() {
     const topButton = document.getElementById("topButton");
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        topButton.style.display = "block"; // Mostra o botão
+        topButton.style.display = "block";
     } else {
-        topButton.style.display = "none"; // Oculta o botão
+        topButton.style.display = "none";
     }
 }
 
-// Função para rolar ao topo
 function scrollToTop() {
     window.scrollTo({
         top: 0,

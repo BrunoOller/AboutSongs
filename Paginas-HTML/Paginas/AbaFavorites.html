@@ -4,35 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- --========================================================================================================-- -->
+
     <!-- Título -->
     <title>AboutSongs</title>
-    <!-- --========================================================================================================-- -->
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="../Assets/Images/favicon.png" type="image/x-icon">
-    <!-- --========================================================================================================-- -->
+
     <!-- Links CSS/Font -->
     <link rel="stylesheet" href="../Assets/CSS/Styles/AbaFavorites.css">
-    <!-- --========================================================================================================-- -->
-    <link rel="stylesheet" href="../Assets/CSS/Global/Reset.css">
-    <!-- --========================================================================================================-- -->
-    <link rel="stylesheet" href="../Assets/CSS/Global/Colors.css">
-    <!-- --========================================================================================================-- -->
-    <link rel="stylesheet" href="../Assets/CSS/Global/Imports.css">
-    <link rel="stylesheet" href="../Assets/CSS/Global/Stars.css">
-    <!-- --========================================================================================================-- -->
+    <link rel="stylesheet" href="../Assets/CSS/Global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- --========================================================================================================-- -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- --========================================================================================================-- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <!-- --========================================================================================================-- -->
 </head>
 
 <body>
+    <!-- Fundo -->
     <div class="stars"></div>
     <div class="stars2"></div>
-    <!-- --========================================================================================================-- -->
+
     <!-- Cabeçalho -->
     <header class="cabecalho">
         <!-- Conteúdo principal do cabeçalho -->
@@ -47,9 +38,24 @@
         </nav>
     </header>
     
-    <!-- --========================================================================================================-- -->
     <main class="page">
-        <!-- --========================================================================================================-- -->
+        <section class="hidden filter">
+            <div class="filtering">
+                <button>Gênero</button>
+                <button>Gênero</button>
+                <button>Gênero</button>
+                <button>Gênero</button>
+                <button>Gênero</button>
+            </div>
+            <div class="search">
+                <div class="icon-search"></div>
+                <div class="input">
+                    <input type="text" placeholder="Pesquise por." id="mysearch">
+                </div>
+                <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
+            </div>
+        </section>
+
         <section class="hidden musicas">
             <h1 class="title-s">Seus Favoritos</h1>
             <div class="cards">
@@ -323,25 +329,30 @@
                         </div>
                     </div>
                 </a>
-                <!-- --========================================================================================================-- -->
             </div>
             </div>
         </section>
-        <!-- --========================================================================================================-- -->
-        <div class="b-voltar">
-            <a href="#"><img src="../Assets/Images/arrow-up-solid.svg"></a>
-        </div>
     </main>
 
+    <!-- Perfil -->
     <a href="./PagePerfil.html" class="perfil">
         <img class="img-perfil" src="../Assets/Images/albuns/v2.jpeg" alt="Imagem de Perfl">
     </a>
 
-    <!-- --========================================================================================================-- -->
+    <!-- Botão de voltar ao topo -->
+    <button id="topButton" onclick="scrollToTop()"><i class="fa-solid fa-angle-up"></i></button>
+
     <!-- Link JS -->
-    <script src="../Assets/JS/header.js"></script>
-    <script src="../Assets/JS/animation.js"></script>
-    <!-- --========================================================================================================-- -->
+    <script src="../Assets/JS/scripts.js"></script>
+    <script src="../Assets/JS/top-btn.js"></script>
+
+    <script>
+        const icon = document.querySelector('.icon-search');
+        const search = document.querySelector('.search');
+        icon.onclick = function () {
+            search.classList.toggle('active')
+        }
+    </script>
 </body>
 
 </html>
