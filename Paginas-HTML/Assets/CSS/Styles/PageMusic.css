@@ -57,36 +57,83 @@
         padding-left: 50px;
         z-index: 10;
 
-        & .duracao {
-            width: 102px;
-            height: 37px;
-
+        & .options-duracao {
+            width: 100%;
+            height: auto;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            background: #ffffff;
 
-            gap: 10px;
-            margin-top: 10px;
-            border-radius: 10px;
-            background-color: #161616;
+            & .options {
+                width: 60%;
+                height: auto;
+                display: flex;
+                gap: 5px;
 
-            & .icon-t {
-                color: #cc01ff;
-                font-size: 13pt;
+                & .comentar {
+                    width: auto;
+
+                    & i {
+                        color: #000000;
+                        font-size: 22pt;
+                    }
+                }
+
+                & .curtida {
+                    width: auto;
+                    background: transparent;
+                    cursor: pointer;
+
+                    & i {
+                        color: #000000;
+                        font-size: 22pt;
+                    }
+                }
+
+                & .c-conta {
+                    color: #313131;
+                    padding-top: 3px;
+                    font-weight: 500;
+                    transition: all .35s ease-out;
+                    cursor: default;
+
+                    &:hover {
+                        color: #000000;
+                        text-decoration: underline;
+                        transition: all .35s ease-in;
+                    }
+                }
             }
 
-            & .tempo {
-                color: #b1b1b1;
-                cursor: default;
-                transition: all .35s ease-out;
-            }
+            & .duracao {
+                width: 40%;
+                height: auto;
 
-            &:hover .tempo {
-                color: #f1f1f1;
-                text-decoration: underline;
-                transition: all .35s ease-in;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                & .icon-t {
+                    color: #000000;
+                    font-size: 18pt;
+                }
+
+                & .tempo {
+                    color: #313131;
+                    cursor: default;
+                    transition: all .35s ease-out;
+                }
+
+                &:hover .tempo {
+                    color: #000000;
+                    text-decoration: underline;
+                    transition: all .35s ease-in;
+                }
             }
         }
+
 
         /* --========================================================================================================-- */
         & .categoria {
@@ -330,7 +377,7 @@
                     height: auto;
                     border-radius: 6.3px;
                 }
-    
+
                 & .c-title {
                     font-size: 12pt;
                     font-weight: 700;
@@ -339,7 +386,7 @@
                     overflow: hidden;
                     white-space: nowrap;
                 }
-    
+
                 & .c-artist {
                     font-size: 10pt;
                     font-weight: 500;

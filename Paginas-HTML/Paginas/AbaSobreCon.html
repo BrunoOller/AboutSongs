@@ -80,12 +80,38 @@
     </div>
 
     <footer class="r-contatos">
-        <h1>Em criação...</h1>
         <div class="emails">
-            <h1 class="t-contact"></h1>
-            <p class="text-c"></p>
+            <div class="textos">
+                <h1 class="t-contact">Contatos & Feedback</h1>
+                <p class="text-c">Mande um feedback a nós copiando nossos email, ou enviando direto pela outra caixa de texto.</p>
+            </div>
+
+            <div class="copy">
+                <div class="copy-email-b">
+                    <input type="text" class="text" value="brunobrunelli4@gmail.com" readonly>
+                    <button id="btn-1">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                </div>
+                <div class="copy-email-g">
+                    <input type="text" class="text" value="guilherme19.b07@gmail.com" readonly>
+                    <button id="btn-2">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="feedback"></div>
+        <div class="feedback">
+            <form action="https://formsubmit.co/brunobrunelli4@gmail.com" method="post">
+                <h2>Nome:</h2>
+                <input class="name" type="text" name="name" required />
+                <h2>Email:</h2>
+                <input class="email" type="email" name="email" required />
+                <h2>Mensagem:</h2>
+                <textarea class="texto" name="message"></textarea>
+                <button class="enviar" type="submit">Enviar</button>
+            </form>
+        </div>
     </footer>
 
     <!-- Perfil -->
@@ -99,6 +125,32 @@
     <!-- Link JS -->
     <script src="../Assets/JS/scripts.js"></script>
     <script src="../Assets/JS/top-btn.js"></script>
+
+    <script>
+        let copyText = document.querySelector(".copy-email-b");
+        copyText.querySelector("#btn-1").addEventListener("click", function(){
+            let input = copyText.querySelector("input.text");
+            input.select();
+            document.execCommand("copy");
+            copyText.classList.add("active");
+            window.getSelection().removeAllRanges();
+            setTimeout(function(){
+                copyText.classList.remove("active");
+            }, 1500);
+        })
+
+        let copyText2 = document.querySelector(".copy-email-g");
+        copyText2.querySelector("#btn-2").addEventListener("click", function(){
+            let input = copyText2.querySelector("input.text");
+            input.select();
+            document.execCommand("copy");
+            copyText2.classList.add("active");
+            window.getSelection().removeAllRanges();
+            setTimeout(function(){
+                copyText2.classList.remove("active");
+            }, 1500);
+        })
+    </script>
 </body>
 
 </html>
