@@ -97,39 +97,56 @@
             </div>
         </section>
 
-        <section id="comments" class="hidden criticas-mais-vistas">
-            <div class="superior">
-                <h2 class="title">Comentários</h2>
-                <div class="line"></div>
+        <section class="comments">
+            <div class="comments-wrp">
+
             </div>
-            <div class="exibicao-c">
-                <div class="comentario">
-                    <a href="./PageAlbum.html" class="referencia">
-                        <img src="../Assets/Images/modelo.png" alt="">
-                        <div class="text">
-                            <h1 class="c-title">Título</h1>
-                            <h2 class="c-artist">Artista(s)</h2>
-                            <p class="c-designation">Álbum/Música</p>
-                        </div>
-                    </a>
-                    <div class="exibicao-u">
-                        <div class="user">
-                            <img src="../Assets/Images/modelo.png" alt="">
-                            <h2 class="name">nome de usuário</h2>
-                        </div>
-                        <div class="critica">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem repudiandae error
-                                cupiditate labore veritatis explicabo, officiis accusantium non optio ut nihil deserunt
-                                unde soluta quis quaerat quas aperiam tempore. Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit. Unde, dicta earum autem vero molestias eum corporis
-                                expedita maxime officiis ab, nisi, libero nulla fugiat quo repellat eos aspernatur
-                                obcaecati. Qui.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="reply-input container"></div>
         </section>
     </main>
+
+    <template class="reply-input-template">
+        <div class="reply-input-container">
+            <img src="../Assets/Images/modelo.png" alt="usuário" class="usr-img">
+            <textarea class="cmnt-input" placeholder="Adicione um comentário..."></textarea>
+            <button class="bu-primary">Enviar</button>
+        </div>
+    </template>
+
+    <template class="comment-template">
+        <div class="comment-wrp">
+            <div class="comment container">
+                <div class="c-score">
+                    <img src="../Assets/Images/.svg" alt="plus" class="score-control score-plus">
+                    <p class="score-number">$</p>
+                    <img src="../Assets/Images/.svg" alt="minus" class="score-control score-minus">
+                </div>
+                <div class="c-controls">
+                    <div class="delete">
+                        <img src="../Assets/Images/icon-delete.svg" alt="delete" class="control-icon">
+                    </div>
+                    <div class="edit">
+                        <img src="../Assets/Images/icon-edit.svg" alt="edit" class="control-icon">
+                    </div>
+                    <div class="reply">
+                        <img src="../Assets/Images/icon-reply.svg" alt="reply" class="control-icon">
+                    </div>
+                </div>
+                <div class="c-user">
+                    <img src="../Assets/Images/modelo.png" alt="user" class="usr-img">
+                    <p class="usr-name">maxblagun</p>
+                    <p class="cmnt-at">2 semanas atrás</p>
+                </div>
+                <div class="c-text">
+                    <span class="reply-to"></span>
+                    <span class="c-body"></span>
+                </div>
+            </div>
+            <div class="replies comment-wrp">
+                
+            </div>
+        </div>
+    </template>
 
     <!-- Perfil -->
     <a href="./PagePerfil.html" class="perfil">
