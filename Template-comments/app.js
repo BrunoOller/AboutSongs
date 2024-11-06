@@ -1,0 +1,53 @@
+const data = {
+    currentUser: {
+        image: {
+            png: "./images/avatars/image-juliusomo.png",
+            webp: "./images/avatars/image-juliusomo.webp",
+        },
+        username: "juliusomo",
+    },
+    comments: [
+        {
+            parent: 0,
+            id: 1,
+            content:
+                "Impressive! Though it seems the drag feature could be improved. But overall it looks incredible.",
+            createdAt: "1 month ago",
+            score: 12,
+            user: {
+                image: {
+                    png: "./images/avatars/image-amyrobson.png",
+                    webp: "./images/avatars/image-amyrobson.webp",
+                },
+                username: "amyrobson",
+            },
+            replies: [],
+        },
+        {
+            parent: 0,
+            id: 2,
+            content:
+                "Woah, your project looks awesome! How long have you been coding for?",
+            createdAt: "2 weeks ago",
+            score: 5,
+            user: {
+                image: {
+                    png: "./images/avatars/image-maxblagun.png",
+                    webp: "./images/avatars/image-maxblagun.webp",
+                },
+                username: "maxblagun",
+            },
+            replies: [
+                {
+                    parent: 2,
+                    id: 1,
+                    content:
+                        "If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React.",
+                    createdAt: "1 weeks ago",
+                    score: 4,
+                    replyingTo: "maxblagun",
+                }
+            ],
+        },
+    ]
+}
