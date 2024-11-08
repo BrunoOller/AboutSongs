@@ -401,6 +401,7 @@ textarea::placeholder {
 button {
     background-color: #cc01ff;
     color: #fff;
+    font-weight: 500;
     border: none;
     padding: 12px 15px;
     border-radius: 5px;
