@@ -47,7 +47,7 @@
                 <h1 class="n-album" id="name-album">VULTURES 2</h1>
                 <h2 class="n-artist">Y$, Kanye West, Ty Dolla $ign</h2>
                 <div class="options">
-                    <a class="comentar" href="#comments"><i class="fa-regular fa-comment"></i></a>
+                    <a class="comentar" href="#comments-s"><i class="fa-regular fa-comment"></i></a>
                     <button class="curtida"><i class="fa-regular fa-heart"></i></button>
                     <p>1mil curtidas</p>
                 </div>
@@ -97,56 +97,39 @@
             </div>
         </section>
 
-        <section class="comments">
-            <div class="comments-wrp">
-
+        <div class="comment-section" id="comments-s">
+            <h2>Comentários</h2>
+            <div class="comment-input">
+                <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+                <textarea id="newComment" placeholder="Adicione um comentário..."></textarea>
+                <button onclick="postComment()">Comentar</button>
             </div>
-            <div class="reply-input container"></div>
-        </section>
+            <div id="commentsContainer"></div>
+        </div>
+    
+        <!-- Modal para editar comentários -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <h3>Editar Comentário</h3>
+                <textarea id="editCommentText"></textarea>
+                <div class="modal-buttons">
+                    <button onclick="saveEdit()">Salvar</button>
+                    <button onclick="closeModal()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modal de confirmação para excluir comentários -->
+        <div id="confirmDeleteModal" class="modal">
+            <div class="modal-content">
+                <p>Tem certeza que deseja excluir este comentário?</p>
+                <div class="modal-buttons">
+                    <button onclick="confirmDelete()" class="delete">Excluir</button>
+                    <button onclick="closeModal()">Cancelar</button>
+                </div>
+            </div>
+        </div>
     </main>
-
-    <template class="reply-input-template">
-        <div class="reply-input-container">
-            <img src="../Assets/Images/modelo.png" alt="usuário" class="usr-img">
-            <textarea class="cmnt-input" placeholder="Adicione um comentário..."></textarea>
-            <button class="bu-primary">Enviar</button>
-        </div>
-    </template>
-
-    <template class="comment-template">
-        <div class="comment-wrp">
-            <div class="comment container">
-                <div class="c-score">
-                    <img src="../Assets/Images/.svg" alt="plus" class="score-control score-plus">
-                    <p class="score-number">$</p>
-                    <img src="../Assets/Images/.svg" alt="minus" class="score-control score-minus">
-                </div>
-                <div class="c-controls">
-                    <div class="delete">
-                        <img src="../Assets/Images/icon-delete.svg" alt="delete" class="control-icon">
-                    </div>
-                    <div class="edit">
-                        <img src="../Assets/Images/icon-edit.svg" alt="edit" class="control-icon">
-                    </div>
-                    <div class="reply">
-                        <img src="../Assets/Images/icon-reply.svg" alt="reply" class="control-icon">
-                    </div>
-                </div>
-                <div class="c-user">
-                    <img src="../Assets/Images/modelo.png" alt="user" class="usr-img">
-                    <p class="usr-name">maxblagun</p>
-                    <p class="cmnt-at">2 semanas atrás</p>
-                </div>
-                <div class="c-text">
-                    <span class="reply-to"></span>
-                    <span class="c-body"></span>
-                </div>
-            </div>
-            <div class="replies comment-wrp">
-                
-            </div>
-        </div>
-    </template>
 
     <!-- Perfil -->
     <a href="./PagePerfil.html" class="perfil">
@@ -159,6 +142,7 @@
     <!-- Link JS -->
     <script src="../Assets/JS/scripts.js"></script>
     <script src="../Assets/JS/top-btn.js"></script>
+    <script src="../Assets/JS/comments.js"></script>
 </body>
 
 </html>

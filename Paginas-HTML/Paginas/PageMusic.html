@@ -48,7 +48,7 @@
                 <h2 class="n-artist">Y$, Kanye West, Ty Dolla $ign</h2>
                 <div class="options-duracao">
                     <div class="options">
-                        <a class="comentar" href="#comments"><i class="fa-regular fa-comment"></i></a>
+                        <a class="comentar" href="#comments-s"><i class="fa-regular fa-comment"></i></a>
                         <button class="curtida"><i class="fa-regular fa-heart"></i></button>
                         <p class="c-conta">0 curtida</p>
                     </div>
@@ -88,38 +88,38 @@
             <hr class="line">
         </div>
 
-        <section id="comments" class="hidden criticas-mais-vistas">
-            <div class="superior">
-                <h2 class="title">Comentários</h2>
-                <div class="line"></div>
+        <div class="comment-section" id="comments-s">
+            <h2>Comentários</h2>
+            <div class="comment-input">
+                <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+                <textarea id="newComment" placeholder="Adicione um comentário..."></textarea>
+                <button onclick="postComment()">Comentar</button>
             </div>
-            <div class="exibicao-c">
-                <div class="comentario">
-                    <a href="./PageAlbum.html" class="referencia">
-                        <img src="../Assets/Images/modelo.png" alt="">
-                        <div class="text">
-                            <h1 class="c-title">Título</h1>
-                            <h2 class="c-artist">Artista(s)</h2>
-                            <p class="c-designation">Álbum/Música</p>
-                        </div>
-                    </a>
-                    <div class="exibicao-u">
-                        <div class="user">
-                            <img src="../Assets/Images/modelo.png" alt="">
-                            <h2 class="name">nome de usuário</h2>
-                        </div>
-                        <div class="critica">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem repudiandae error
-                                cupiditate labore veritatis explicabo, officiis accusantium non optio ut nihil deserunt
-                                unde soluta quis quaerat quas aperiam tempore. Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit. Unde, dicta earum autem vero molestias eum corporis
-                                expedita maxime officiis ab, nisi, libero nulla fugiat quo repellat eos aspernatur
-                                obcaecati. Qui.</p>
-                        </div>
-                    </div>
+            <div id="commentsContainer"></div>
+        </div>
+    
+        <!-- Modal para editar comentários -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <h3>Editar Comentário</h3>
+                <textarea id="editCommentText"></textarea>
+                <div class="modal-buttons">
+                    <button onclick="saveEdit()">Salvar</button>
+                    <button onclick="closeModal()">Cancelar</button>
                 </div>
             </div>
-        </section>
+        </div>
+    
+        <!-- Modal de confirmação para excluir comentários -->
+        <div id="confirmDeleteModal" class="modal">
+            <div class="modal-content">
+                <p>Tem certeza que deseja excluir este comentário?</p>
+                <div class="modal-buttons">
+                    <button onclick="confirmDelete()" class="delete">Excluir</button>
+                    <button onclick="closeModal()">Cancelar</button>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Perfil -->
@@ -133,6 +133,7 @@
     <!-- Link JS -->
     <script src="../Assets/JS/scripts.js"></script>
     <script src="../Assets/JS/top-btn.js"></script>
+    <script src="../Assets/JS/comments.js"></script>
 </body>
 
 </html>
