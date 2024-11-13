@@ -139,106 +139,6 @@
         }
     }
 
-    .criticas-mais-vistas {
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 3.5px;
-        margin-top: 35px;
-        padding-bottom: 15px;
-
-        & .superior {
-            width: 950px;
-            height: auto;
-
-            & .title {
-                font-size: 17px;
-                margin-bottom: 0;
-            }
-
-            & .line {
-                width: 950px;
-                height: .35px;
-            }
-        }
-
-        & .exibicao-c {
-            width: 950px;
-            height: auto;
-
-            & .comentario {
-                width: 100%;
-                height: auto;
-                background-color: #1d1d1d0d;
-
-                & .referencia {
-                    width: 175px;
-                    gap: 4px;
-                    padding: 10px;
-
-                    & img {
-                        width: 125px;
-                        height: 125px;
-                    }
-
-                    & .text {
-                        width: 125px;
-                        height: auto;
-                        border-radius: 6.3px;
-                    }
-
-                    & .c-title {
-                        font-size: 11pt;
-                    }
-
-                    & .c-artist {
-                        font-size: 10pt;
-                    }
-
-                    & .c-designation {
-                        font-size: 8.7pt;
-                    }
-                }
-
-                & .exibicao-u {
-                    width: 775px;
-                    height: auto;
-                    padding: 10px 0;
-
-                    & .user {
-                        width: 705px;
-                        height: auto;
-                        display: flex;
-                        justify-content: start;
-                        align-items: center;
-                        gap: 12px;
-
-                        & img {
-                            width: 50px;
-                            height: 50px;
-                        }
-
-                        & .name {
-                            font-size: 12pt;
-                            font-weight: 600;
-                        }
-                    }
-
-                    & .critica {
-
-                        & p {
-                            width: 88%;
-                            font-size: 10.5pt;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     .page {
         gap: 40px;
     }
@@ -358,80 +258,112 @@
         }
     }
 
-    .criticas-mais-vistas {
-        gap: 2.7px;
-        margin-top: 27px;
-        padding-bottom: 15px;
+    .page {
+        gap: 33px;
+    }
+}
+
+@media (max-width: 914px) {
+    .inicio {
+
+        & .banner {
+            height: 40vh;
+        }
+    }
+
+    .sobre {
+        max-width: 760px;
+
+        & .b-content {
+            height: 150px;
+            padding: 6.5px;
+
+            & i {
+                font-size: 23pt;
+            }
+
+            & hr {
+                height: 60%;
+            }
+
+            & .b-text {
+
+                & h1 {
+                    font-size: 12.5px;
+                }
+
+                & p {
+                    font-size: 11.5px;
+                }
+            }
+        }
+    }
+
+    .musicas,
+    .albuns {
+        height: auto;
+        margin-top: 15px;
+        gap: 10px;
 
         & .superior {
-            width: 850px;
+            width: 740px;
+            max-width: 740px;
 
-            & .line {
-                width: 850px;
+            & .title-s, .title-a {
+                font-size: 15px;
+            }
+
+            & .all-s, .all-a {
+                font-size: 14px;
             }
         }
 
-        & .exibicao-c {
-            width: 850px;
+        & .cards {
+            width: 740px;
             height: auto;
+            gap: 1px;
 
-            & .comentario {
+            & .c-card {
+                width: 121.5px;
+                padding: 7px 0;
+                gap: 1.5px;
 
-                & .referencia {
-                    width: 180px;
-                    gap: 4px;
-                    padding: 10px;
-
-                    & img {
-                        width: 125px;
-                        height: 125px;
-                    }
-
-                    & .text {
-                        width: 125px;
-                        height: auto;
-                        border-radius: 6.3px;
-                    }
-
-                    & .c-title {
-                        font-size: 11pt;
-                    }
-
-                    & .c-artist {
-                        font-size: 10pt;
-                    }
-
-                    & .c-designation {
-                        font-size: 8.7pt;
-                    }
+                & img {
+                    width: 110px;
+                    height: 110px;
+                    margin-left: 8.35px;
                 }
 
-                & .exibicao-u {
-                    width: 670px;
-                    height: auto;
-                    padding: 10px 10px;
+                & .text {
+                    width: 120px;
+                    margin-left: 8.35px;
+                }
 
-                    & .user {
-                        width: 605px;
-                        margin-top: 10px;
+                & .c-title {
+                    font-size: 10pt;
+                }
 
-                        & img {
-                            width: 48px;
-                            height: 48px;
-                        }
+                & .c-artist {
+                    font-size: 9.2pt;
+                }
 
-                        & .name {
-                            font-size: 11.5pt;
-                            font-weight: 600;
-                        }
+                & .c-designation {
+                    font-size: 9pt;
+                }
+
+                & .plataformas {
+                    width: 90%;
+                    margin-top: 2.5px;
+                    gap: 2.7px;
+
+                    & .p {
+                        width: 26.5px;
+                        height: 26.5px;
+                        padding-right: 3.3px;
                     }
 
-                    & .critica {
-
-                        & p {
-                            width: 88%;
-                            font-size: 10pt;
-                        }
+                    & i {
+                        font-size: 13.5pt;
                     }
                 }
             }
@@ -439,6 +371,6 @@
     }
 
     .page {
-        gap: 33px;
+        gap: 23px;
     }
 }
