@@ -1,0 +1,376 @@
+@media (max-width: 1300px) {
+    .inicio {
+
+        & .banner {
+            height: 60vh;
+        }
+    }
+
+    .line-1 {
+
+        & .hr-1 {
+            width: 70%;
+            height: .35px;
+        }
+    }
+
+    .sobre {
+        max-width: 950px;
+
+        & .b-content {
+            padding: 9.5px;
+            gap: 21.5px;
+
+            & i {
+                font-size: 28pt;
+            }
+
+            & hr {
+                height: 70%;
+            }
+
+            & .b-text {
+                width: 60%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                flex-direction: column;
+
+                & h1 {
+                    font-size: 15.5px;
+                }
+
+                & p {
+                    font-size: 14.5px;
+                }
+            }
+        }
+    }
+
+    .line-2 {
+
+        & .hr-2 {
+            width: 70%;
+            height: .35px;
+        }
+    }
+
+    .musicas,
+    .albuns {
+        height: auto;
+        margin-top: 15px;
+        gap: 10px;
+
+        & .superior {
+            width: 950px;
+            max-width: 950px;
+        }
+
+        & .cards {
+            width: 1000px;
+            height: auto;
+            gap: 1px;
+
+            & .c-card {
+                width: 163px;
+                height: auto;
+                padding: 10px 0;
+                border-radius: 2px;
+                gap: 2.5px;
+
+                & img {
+                    width: 145px;
+                    height: 145px;
+                    margin-left: 3.8px;
+                    border-radius: 4px;
+                    box-shadow: 0 0 15px black;
+                    filter: saturate(1.3);
+                }
+
+                & .text {
+                    border-radius: 0;
+                }
+
+                & .c-title {
+                    font-size: 11.6pt;
+                    font-weight: 700;
+                    color: var(--cor-t-lvl-01);
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+
+                & .c-artist {
+                    font-size: 10pt;
+                    font-weight: 500;
+                    color: #a7a7a7;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+
+                & .c-designation {
+                    font-size: 9.6pt;
+                    font-weight: 500;
+                    color: #888888;
+                    transition: .25s ease-out;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+
+                & .plataformas {
+                    width: 70%;
+                    margin-top: 2.5px;
+                    gap: 3.5px;
+
+                    & .p {
+                        width: 29.5px;
+                        height: 29.5px;
+                        padding-right: 3.3px;
+                    }
+
+                    & i {
+                        font-size: 16.5pt;
+                    }
+                }
+            }
+        }
+    }
+
+    .page {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .inicio {
+
+        & .banner {
+            height: 42vh;
+        }
+    }
+
+    .line-1 {
+
+        & .hr-1 {
+            width: 40%;
+            height: .35px;
+        }
+    }
+
+    .sobre {
+        max-width: 860px;
+
+        & .b-content {
+            padding: 8.5px;
+
+            & i {
+                font-size: 25pt;
+            }
+
+            & hr {
+                height: 60%;
+            }
+
+            & .b-text {
+
+                & h1 {
+                    font-size: 14.5px;
+                }
+
+                & p {
+                    font-size: 13.5px;
+                }
+            }
+        }
+    }
+
+    .line-2 {
+
+        & .hr-2 {
+            width: 67%;
+            height: .35px;
+        }
+    }
+
+    .musicas,
+    .albuns {
+        height: auto;
+        margin-top: 15px;
+        gap: 10px;
+
+        & .superior {
+            width: 850px;
+            max-width: 850px;
+        }
+
+        & .cards {
+            width: 860px;
+            height: auto;
+            gap: 1px;
+
+            & .c-card {
+                width: 141px;
+                padding: 7px 0;
+                gap: 1.5px;
+
+                & img {
+                    width: 125px;
+                    height: 125px;
+                    margin-right: 3px;
+                }
+
+                & .text {
+                    width: 120px;
+                    margin-left: 7.3px;
+                }
+
+                & .c-title {
+                    font-size: 10.7pt;
+                }
+
+                & .c-artist {
+                    font-size: 9.8pt;
+                }
+
+                & .c-designation {
+                    font-size: 9.5pt;
+                }
+
+                & .plataformas {
+                    width: 65%;
+                    margin-top: 2.5px;
+                    gap: 2.7px;
+
+                    & .p {
+                        width: 26.5px;
+                        height: 26.5px;
+                        padding-right: 3.3px;
+                    }
+
+                    & i {
+                        font-size: 13.5pt;
+                    }
+                }
+            }
+        }
+    }
+
+    .page {
+        gap: 33px;
+    }
+}
+
+@media (max-width: 914px) {
+    .inicio {
+
+        & .banner {
+            height: 40vh;
+        }
+    }
+
+    .sobre {
+        max-width: 760px;
+
+        & .b-content {
+            height: 150px;
+            padding: 6.5px;
+
+            & i {
+                font-size: 23pt;
+            }
+
+            & hr {
+                height: 60%;
+            }
+
+            & .b-text {
+
+                & h1 {
+                    font-size: 12.5px;
+                }
+
+                & p {
+                    font-size: 11.5px;
+                }
+            }
+        }
+    }
+
+    .musicas,
+    .albuns {
+        height: auto;
+        margin-top: 15px;
+        gap: 10px;
+
+        & .superior {
+            width: 740px;
+            max-width: 740px;
+
+            & .title-s, .title-a {
+                font-size: 15px;
+            }
+
+            & .all-s, .all-a {
+                font-size: 14px;
+            }
+        }
+
+        & .cards {
+            width: 740px;
+            height: auto;
+            gap: 1px;
+
+            & .c-card {
+                width: 121.5px;
+                padding: 7px 0;
+                gap: 1.5px;
+
+                & img {
+                    width: 110px;
+                    height: 110px;
+                    margin-left: 8.35px;
+                }
+
+                & .text {
+                    width: 120px;
+                    margin-left: 8.35px;
+                }
+
+                & .c-title {
+                    font-size: 10pt;
+                }
+
+                & .c-artist {
+                    font-size: 9.2pt;
+                }
+
+                & .c-designation {
+                    font-size: 9pt;
+                }
+
+                & .plataformas {
+                    width: 90%;
+                    margin-top: 2.5px;
+                    gap: 2.7px;
+
+                    & .p {
+                        width: 26.5px;
+                        height: 26.5px;
+                        padding-right: 3.3px;
+                    }
+
+                    & i {
+                        font-size: 13.5pt;
+                    }
+                }
+            }
+        }
+    }
+
+    .page {
+        gap: 23px;
+    }
+}

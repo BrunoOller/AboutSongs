@@ -1,0 +1,128 @@
+@{
+    ViewData["Title"] = "Sobre";
+}
+
+@section Styles {
+    <!-- Links CSS/Font -->
+    <link rel="stylesheet" href="~/css/Styles/AbaSobreCon.css">
+    <link rel="stylesheet" href="~/css/Global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+}
+
+<section class="inicio" id="home">
+    <img class="banner" src="~/img/about.png" alt="">
+</section>
+
+<section class="hidden s-first" id="first">
+    <div class="texts">
+        <h1 class="t-first"><span style="color: #cc01ff; font-weight: 600;">Avalie</span> Sons Favoritos</h1>
+        <p class="text-first">Aqui é o lugar ideal para você compartilhar suas opiniões sobre as músicas e álbuns que
+            mais marcaram sua vida! Avalie suas faixas favoritas, comente sobre a produção, as letras ou as melodias que
+            mais chamaram sua atenção, e deixe críticas construtivas para os artistas. <br><br>
+            Cada opinião conta e pode ajudar outros amantes da música a descobrir novos sons e experiências. Então,
+            aproveite para dar sua nota, escrever o que pensa e participar de uma conversa repleta de paixão pela
+            música. Este é o espaço onde sua voz faz a diferença!</p>
+    </div>
+    <div class="img">
+        <img src="~/img/Image-f-example.png" alt="Imagem Exemplo 1" class="imagem-i">
+    </div>
+</section>
+
+<section class="hidden s-second" id="second">
+    <div class="img">
+        <img src="~/img/Image-s-example.png" alt="Imagem Exemplo 2" class="imagem-i">
+    </div>
+    <div class="texts">
+        <h1 class="t-second"><span style="color: #cc01ff; font-weight: 600;">Encontre</span> Novos Sons</h1>
+        <p class="text-second">Descubra músicas e artistas que podem se tornar os novos favoritos na sua playlist! Nossa
+            plataforma está aqui para ajudá-lo a explorar sons incríveis, seja de gêneros que você já ama ou de estilos
+            completamente novos. <br><br>
+            Com recomendações feitas sob medida, você pode ampliar seus horizontes musicais e mergulhar em um universo
+            cheio de melodias, ritmos e letras que podem surpreender e encantar. Deixe-se levar pela curiosidade e
+            encontre sua próxima paixão musical aqui!</p>
+    </div>
+</section>
+
+<section class="hidden s-third" id="third">
+    <div class="texts">
+        <h1 class="t-third"><span style="color: #cc01ff; font-weight: 600;">Saiba</span> Onde Ouvir</h1>
+        <p class="text-third">Não sabe onde ouvir suas músicas favoritas? Nós temos a resposta! Aqui você encontra
+            informações sobre as principais plataformas e serviços onde pode acessar aquele som que tanto ama. <br><br>
+            Seja para ouvir no conforto de casa ou levar as músicas com você, nós te ajudamos a conectar com seus
+            artistas e faixas favoritas. Descubra onde escutar e aproveite a música de onde estiver!</p>
+    </div>
+    <div class="img">
+        <img src="~/img/Image-t-example.png" alt="Imagem Exemplo 3" class="imagem-i">
+    </div>
+</section>
+</main>
+
+<div class="line">
+    <hr>
+</div>
+
+<footer class="r-contatos">
+    <div class="emails">
+        <div class="textos">
+            <h1 class="t-contact">Contatos & Feedback</h1>
+            <p class="text-c">Mande um feedback a nós copiando nossos email, ou enviando direto pela outra caixa de
+                texto.</p>
+        </div>
+
+        <div class="copy">
+            <div class="copy-email-b">
+                <input type="text" class="text" value="brunobrunelli4@gmail.com" readonly>
+                <button id="btn-1">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+            </div>
+            <div class="copy-email-g">
+                <input type="text" class="text" value="guilherme19.b07@gmail.com" readonly>
+                <button id="btn-2">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="feedback">
+        <form action="https://formsubmit.co/brunobrunelli4@gmail.com" method="post">
+            <h2>Nome:</h2>
+            <input class="name" type="text" name="name" required />
+            <h2>Email:</h2>
+            <input class="email" type="email" name="email" required />
+            <h2>Mensagem:</h2>
+            <textarea class="texto" name="message"></textarea>
+            <button class="enviar" type="submit">Enviar</button>
+        </form>
+    </div>
+</footer>
+
+@section Scripts {
+    <script>
+        let copyText = document.querySelector(".copy-email-b");
+        copyText.querySelector("#btn-1").addEventListener("click", function () {
+            let input = copyText.querySelector("input.text");
+            input.select();
+            document.execCommand("copy");
+            copyText.classList.add("active");
+            window.getSelection().removeAllRanges();
+            setTimeout(function () {
+                copyText.classList.remove("active");
+            }, 1500);
+        })
+
+        let copyText2 = document.querySelector(".copy-email-g");
+        copyText2.querySelector("#btn-2").addEventListener("click", function () {
+            let input = copyText2.querySelector("input.text");
+            input.select();
+            document.execCommand("copy");
+            copyText2.classList.add("active");
+            window.getSelection().removeAllRanges();
+            setTimeout(function () {
+                copyText2.classList.remove("active");
+            }, 1500);
+        })
+    </script>
+}

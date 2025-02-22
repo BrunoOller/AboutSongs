@@ -1,0 +1,96 @@
+@model AboutSongs.Models.Usuario
+@{
+    ViewData["Title"] = "Perfil";
+}
+
+@section Styles {
+    <!-- Links CSS/Font -->
+    <link rel="stylesheet" href="~/css/Styles/PagePerfil.css">
+    <link rel="stylesheet" href="~/css/Global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+}
+
+<main class="page">
+    <section id="about" class="hidden v-perfil">
+        <!-- Formulário para envio da foto e edição do nome -->
+        <form method="post" enctype="multipart/form-data" asp-action="EditarPerfil">
+            <div class="imagem-perfil">
+                <!-- Label para clicar na imagem -->
+                <label for="foto" class="img-p-label">
+                    <img src="@Model.Foto" alt="Imagem de perfil" class="img-p" id="PreviewImage">
+                </label>
+                <!-- Input oculto para seleção de arquivo -->
+                <input type="file" id="foto" name="foto" style="display: none;" onchange="previewImage(this);">
+            </div>
+            <div class="infos">
+                <div class="names">
+                    <!-- Campo de entrada para edição do nome -->
+                    <input type="text" name="nome" class="n-perfil-input" value="@Model.Nome" required>
+                </div>
+            </div>
+            <!-- Botão para salvar alterações -->
+            <button type="submit" class="btn-save">Salvar</button>
+        </form>
+    </section>
+</main>
+
+<!-- Botão de voltar ao topo -->
+<button id="topButton" onclick="scrollToTop()"><i class="fa-solid fa-angle-up"></i></button>
+
+<!-- Link JS -->
+<script src="~/js/scripts.js"></script>
+
+@section Scripts {
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('input[type="file"]').addEventListener('change', function () {
+                if (this.files && this.files[0]) {
+                    var img = document.getElementById('PreviewImage');
+                    img.src = URL.createObjectURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+}
+
+<style>
+    .img-p-label {
+        margin-bottom: 15px;
+    }
+
+    .n-perfil-input {
+        font-size: 1.5rem;
+        font-weight: bold;
+        border: 1px solid #ccc;
+        color: black;
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 7px;
+    }
+
+    .n-perfil-input:focus {
+        outline: none;
+        border-color: #cc01ff;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-save {
+        background-color: #cc01ff;
+        color: white;
+        border: none;
+        margin-top: 5px;
+        margin-left: 205px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-save:hover {
+        background-color: #740091;
+    }
+</style>

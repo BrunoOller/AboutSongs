@@ -1,0 +1,131 @@
+@model AboutSongs.ViewModels.HomeVM
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+@section Styles {
+    <!-- Links CSS/Font -->
+    <link rel="stylesheet" href="~/css/Styles/PageHome.css">
+    <link rel="stylesheet" href="~/css/Responsivo/ResHome.css">
+    <link rel="stylesheet" href="~/css/Global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+}
+
+<!-- Section da imagem principal -->
+<section class="inicio" id="home">
+    <img class="banner" src="~/img/aboutsong_.png" alt="">
+</section>
+
+<div class="hidden line-1">
+    <hr class="hr-1">
+</div>
+
+<!-- Section de apresentação -->
+<section class="hidden sobre" id="about">
+    <a asp-action="Sobre" asp-controller="Home" class="hidden b-content">
+        <i class="icon-a fa-solid fa-star-half-stroke"></i>
+        <hr>
+        <div class="b-text">
+            <h1><span style="color: #cc01ff; font-weight: 600;">Avalie</span> Sons Favoritos</h1>
+            <p>Aqui você é capaz de avaliar e/ou criticar músicas e álbuns.</p>
+        </div>
+    </a>
+    <a asp-action="Sobre" asp-fragment="second" asp-controller="Home" class="hidden b-content">
+        <i class="icon-b fa-solid fa-magnifying-glass"></i>
+        <hr>
+        <div class="b-text">
+            <h1><span style="color: #cc01ff; font-weight: 600;">Encontre</span> Novos Sons</h1>
+            <p>Aqui nós o ajudamos a encontrar sons novos.</p>
+        </div>
+    </a>
+    <a asp-action="Sobre" asp-fragment="third" asp-controller="Home" class="hidden b-content">
+        <i class="icon-c fa-solid fa-circle-info"></i>
+        <hr>
+        <div class="b-text">
+            <h1><span style="color: #cc01ff; font-weight: 600;">Saiba</span> Onde Ouvir</h1>
+            <p>Aqui você será capaz de saber onde poderá ouvir seu som favorito.</p>
+        </div>
+    </a>
+</section>
+
+<div class="hidden line-2">
+    <hr class="hr-2">
+</div>
+
+<!-- Sections de músicas -->
+<section class="hidden musicas">
+    <div class="superior">
+        <h1 class="title-s">Algumas músicas</h1>
+    </div>
+    <div class="carousel-container">
+        <button id="prevBtn" class="arrow" disabled><i class="fa-solid fa-angle-left"></i></button>
+        <div class="carousel">
+            <div class="carousel-track">
+                @foreach (var musica in Model.Musicas)
+                {
+                    <a asp-action="Musica" asp-controller="Home" asp-route-id="@musica.Id">
+                        <div class="c-card">
+                            <img src="@musica.Foto" alt="">
+                            <div class="text">
+                                <h1 class="c-title">@musica.Nome</h1>
+                                <h2 class="c-artist">@string.Join(", ", musica.Artistas.Select(a => a.Nome).ToList())</h2>
+                                <p class="c-designation">@string.Join(", ", musica.Generos.Select(a => a.Nome).ToList())</p>
+                            </div>
+                            <div class="plataformas">
+                                @if (musica.Spotify != null)
+                                {
+                                    <a class="p" href="@musica.Spotify" target="_blank"><i
+                                            class="i-spotify fa-brands fa-spotify"></i></a>
+                                }
+                                @if (musica.Youtube != null)
+                                {
+                                    <a class="p" href="@musica.Youtube" target="_blank"><i
+                                            class="i-youtube fa-brands fa-youtube"></i></a>
+                                }
+                                @if (musica.AppleMusic != null)
+                                {
+                                    <a class="p" href="@musica.AppleMusic" target="_blank"><i
+                                            class="i-apple fa-brands fa-apple"></i></a>
+                                }
+                            </div>
+                        </div>
+                    </a>
+                }
+            </div>
+        </div>
+        <button id="nextBtn" class="arrow"><i class="fa-solid fa-angle-right"></i></button>
+    </div>
+</section>
+
+<section class="hidden albuns">
+    <div class="superior">
+        <h1 class="title-a">Diga o que acha...</h1>
+        <a class="all-a" asp-action="Albuns" asp-controller="Home">Ver tudo.</a>
+    </div>
+    <div class="cards">
+        @foreach (var album in Model.Albuns.Take(6))
+        {
+            <a asp-action="Album" asp-controller="Home" asp-route-id="@album.Id">
+                <div class="c-card">
+                    <img src="@album.Foto" alt="">
+                    <div class="text">
+                        <h1 class="c-title">@album.Nome</h1>
+                        <h2 class="c-artist">@string.Join(", ", album.Artistas.Select(a => a.Nome).ToList())</h2>
+                        <p class="c-designation">@string.Join(", ", album.Generos.Select(a => a.Nome).ToList())</p>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+</section>
+
+<div class="hidden line-3">
+    <hr class="hr-3">
+</div>
+
+<section class="hidden frase">
+    <h1>"A música é a batida invisível que move o mundo, conectando almas, embalando memórias e transformando vidas em melodias únicas."</h1>
+    <p>Equipe AboutSongs</p>
+</section>

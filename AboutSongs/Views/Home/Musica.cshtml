@@ -1,0 +1,156 @@
+@model AboutSongs.ViewModels.MusicaVM
+@inject AboutSongs.Services.IUsuarioService _usuarioService
+@{
+    ViewData["Title"] = "Música";
+    var usuario = await _usuarioService.GetUsuarioLogado();
+}
+
+@section Styles {
+    <!-- Links CSS/Font -->
+    <link rel="stylesheet" href="~/css/Styles/PageMusic.css">
+    <link rel="stylesheet" href="~/css/Responsivo/ResMusic.css">
+    <link rel="stylesheet" href="~/css/Global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+}
+<section id="about" class="hidden v-music">
+    <img src="@Model.Foto" alt="Foto da Música" class="music">
+    <div class="infos">
+        <h3 class="categoria">Música</h3>
+        <h1 class="n-music" id="name-music">@Model.Nome</h1>
+        <h2 class="n-artist">@string.Join(", ", Model.Artistas.Select(a => a.Nome).ToList())</h2>
+        <div class="options">
+            <a class="comentar" href="#comments-s"><i class="fa-regular fa-comment"></i></a>
+            @* <button class="curtida"><i class="fa-regular fa-heart"></i></button>
+            <p>1 mil curtidas</p> *@
+        </div>
+    </div>
+</section>
+
+<section class="informations">
+    <div class="hidden f-content">
+        @* <div class="credits">
+            <h1 class="title-c">Créditos.</h1>
+            <p class="c-credit">Nome dos compositores responsáveis pela produção</p>
+        </div> *@
+        <div class="classification">
+            <h1 class="title-cl">Gêneros Musicais.</h1>
+            <p class="s-musical">@string.Join(", ", Model.Generos.Select(a => a.Nome).ToList())</p>
+        </div>
+    </div>
+    <div class="s-content">
+        <ul>
+            @if (Model.Spotify != null)
+            {
+                <li><a href="@Model.Spotify"><i class="icon-s fa-brands fa-spotify"></i></a>
+                </li>
+            }
+            @if (Model.Youtube != null)
+            {
+                <li><a href="@Model.Youtube"><i class="icon-y fa-brands fa-youtube"></i></a>
+                </li>
+            }
+            @if (Model.AppleMusic != null)
+            {
+                <li><a href="@Model.AppleMusic"><i class="icon-a fa-brands fa-apple"></i></a></li>
+            }
+        </ul>
+    </div>
+</section>
+
+<div class="hr-1">
+    <hr class="line">
+</div>
+
+<div class="comment-section mb-5" id="comments-s">
+    <h2>Comentários</h2>
+
+    @if (usuario != null)
+    {
+        <form class="comment-input" asp-action="ComentarMusica" method="post">
+            <input type="hidden" asp-for="Id">
+            <img src="@(usuario.Foto ?? Url.Content("~/img/icon-user.png"))" alt="User Avatar" class="user-avatar">
+            <textarea id="newComment" name="Comentario" placeholder="Adicione um comentário..." required></textarea>
+            <button type="submit">Comentar</button>
+        </form>
+    }
+    else
+    {
+        if (Model.Comentarios.Count == 0)
+        {
+            <div class="comment">
+                <p class="text-white text-center">Ainda não existem comentários para essa música,
+                    faça <a asp-action="Login" asp-controller="Account" asp-route-returnUrl="/Home/Musica/@Model.Id" style="color: #CC01FF !important;">login</a> e seja o
+                    primeiro!!!
+                </p>
+            </div>
+        }
+    }
+
+    <div id="commentsContainer">
+        @foreach (var comentario in Model.Comentarios)
+        {
+            <div class="comment">
+                <img src="@(comentario.Usuario.Foto ?? Url.Content("~/img/icon-user.png"))" alt="@comentario.Usuario.Nome"
+                    class="comment-avatar">
+                <div class="comment-content">
+                    <div class="comment-name">@comentario.Usuario.Nome</div>
+                    <div class="comment-text" style="white-space: pre-line">@comentario.Comentario</div>
+                    <div class="comment-actions">
+                        @* <span class="like"><i class="fas fa-thumbs-up me-2"></i> 0</span>
+                        <span class="dislike"><i class="fas fa-thumbs-down me-2"></i> 0</span>
+                        <span><i class="fas fa-edit me-2"></i> Editar</span>
+                        <span><i class="fas fa-trash-alt me-2"></i> Excluir</span>
+                        <span><i class="fas fa-reply me-2"></i> Responder</span> *@
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Modal para editar comentários -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <h3>Editar Comentário</h3>
+        <textarea id="editCommentText"></textarea>
+        <div class="modal-buttons">
+            <button onclick="saveEdit()">Salvar</button>
+            <button onclick="closeModal()">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de confirmação para excluir comentários -->
+<div id="confirmDeleteModal" class="modal">
+    <div class="modal-content">
+        <p>Tem certeza que deseja excluir este comentário?</p>
+        <div class="modal-buttons">
+            <button onclick="confirmDelete()" class="delete">Excluir</button>
+            <button onclick="closeModal()">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @* <script src="~/js/comments.js"></script> *@
+    <script>
+        // Script para diminuir a fonte caso o texto ultrapasse o tamanho máximo
+        // Álbum
+        window.addEventListener('load', adjustFontSize);
+        window.addEventListener('resize', adjustFontSize);
+
+        function adjustFontSize() {
+            const musicName = document.getElementById('name-music');
+            let fontSize = 48; // Tamanho inicial da fonte
+            musicName.style.fontSize = `${fontSize}px`;
+
+            // Reduz o tamanho da fonte enquanto o título não caber na largura
+            while (musicName.scrollWidth > musicName.offsetWidth && fontSize > 10) {
+                fontSize--;
+                musicName.style.fontSize = `${fontSize}px`;
+            }
+        }
+    </script>
+}

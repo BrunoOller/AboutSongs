@@ -1,0 +1,29 @@
+@model IEnumerable<AboutSongs.ViewModels.MusicaVM>
+
+@foreach (var musica in Model)
+{
+    <a asp-action="Musica" asp-controller="Home" asp-route-id="@musica.Id">
+        <div class="c-card">
+            <img src="@musica.Foto" alt="@musica.Nome" />
+            <div class="text">
+                <h1 class="c-title">@musica.Nome</h1>
+                <h2 class="c-artist">@string.Join(", ", musica.Artistas.Select(a => a.Nome).ToList())</h2>
+                <p class="c-designation">@string.Join(", ", musica.Generos.Select(a => a.Nome).ToList())</p>
+            </div>
+            <div class="plataformas">
+                @if (musica.Spotify != null)
+                {
+                    <a class="p" href="@musica.Spotify" target="_blank"><i class="i-spotify fa-brands fa-spotify"></i></a>
+                }
+                @if (musica.Youtube != null)
+                {
+                    <a class="p" href="@musica.Youtube" target="_blank"><i class="i-youtube fa-brands fa-youtube"></i></a>
+                }
+                @if (musica.AppleMusic != null)
+                {
+                    <a class="p" href="@musica.AppleMusic" target="_blank"><i class="i-apple fa-brands fa-apple"></i></a>
+                }
+            </div>
+        </div>
+    </a>
+}

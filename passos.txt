@@ -1,0 +1,50 @@
+Configurar o Git Local:
+
+-> Bruno Oller
+    git config --global user.name "BrunoOller"
+    git config --global user.email brunobrunelli4@gmail.com
+
+-> Guilherme Bispo
+    git config --global user.name "Guibis17"
+    git config --global user.email guilherme19.b07@gmail.com
+
+Criar o projeto
+dotnet new mvc -o AboutSongs 
+
+Nuget Gallery
+    Shift + Ctrl + P
+    - Pesquisar e Instalar:
+        EntityFrameworkCore
+        EntityFrameworkCore.Design
+        EntityFrameworkCore.InMemory
+        AspNetCore.Identity.EntityFrameworkCore dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore 
+
+
+Criar as classes de dados - Pasta Models
+
+Criar a pasta Data e a classe de Contexto
+
+Criar a ConnectionString no arquivo appsettings.json
+
+Criar o serviço de conexão no arquivo Program.cs
+
+Executar no terminal:
+dotnet tool install --global dotnet-aspnet-codegenerator --version 8.0.1
+
+Criar um Controller - CRUD:
+dotnet-aspnet-codegenerator controller -name CoresController -m Cor -dc AppDbContext --relativeFolderPath Controllers -udl
+
+Nuget Gallery
+    Shift + Ctrl + P
+    - Pesquisar e Instalar:
+        Microsoft.VisualStudio.Web.CodeGeneration.Design
+        Microsoft.EntityFrameworkCore.Tools
+        Microsoft.EntityFrameworkCore.SqlServer
+
+dotnet ef migrations add InitialCreate
+
+dotnet ef migrations add criar-banco
+
+dotnet ef database update
+
+dotnet watch run

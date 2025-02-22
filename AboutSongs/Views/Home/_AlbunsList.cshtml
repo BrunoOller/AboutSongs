@@ -1,0 +1,15 @@
+@model IEnumerable<AboutSongs.ViewModels.AlbumVM>
+
+@foreach (var album in Model)
+{
+    <a asp-action="Album" asp-route-id="@album.Id">
+        <div class="c-card">
+            <img src="@album.Foto" alt="" />
+            <div class="text">
+                <h1 class="c-title">@album.Nome</h1>
+                <h2 class="c-artist">@string.Join(", ", album.Artistas.Select(a => a.Nome).ToList())</h2>
+                <p class="c-designation">@string.Join(", ", album.Generos.Select(a => a.Nome).ToList())</p>
+            </div>
+        </div>
+    </a>
+}

@@ -1,0 +1,137 @@
+@inject AboutSongs.Services.IUsuarioService userService
+@{
+    var usuario = await userService.GetUsuarioLogado();
+}
+
+@if (usuario == null)
+{
+    <a asp-action="Login" asp-controller="Account" class="me-2">
+        <img src="@Url.Content("~/img/icon-user.png")" class="usuario">
+    </a>
+}
+else
+{
+    <div class="dropdown">
+        <img src='@(usuario.Foto ?? Url.Content("~/img/icon-user.png"))'
+            class="usuario" alt="Foto do usuário" onclick="toggleDropdown(event)">
+        <div class="dropdown-content" id="dropdownMenu">
+            @if (usuario.IsAdmin)
+            {
+                <a class="dropdown-item" asp-action="Index" asp-controller="Home">
+                    <i class="bi bi-house"></i> Pública
+                </a>
+                <a class="dropdown-item" asp-action="Index" asp-controller="Admin">
+                    <i class="bi bi-receipt"></i>Administrativa
+                </a>
+            }
+            <a class="dropdown-item" asp-action="Perfil" asp-controller="Home">
+                <i class="bi bi-person-bounding-box"></i> Perfil
+            </a>
+
+            <form method="POST" asp-action="Logout" asp-controller="Account">
+                <button type="submit" class="dropdown-item Sair">
+                    Desconectar
+                </button>
+            </form>
+
+        </div>
+    </div>
+}
+
+<script>
+    function toggleDropdown(event) {
+        event.stopPropagation();
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        dropdownMenu.classList.toggle('show');
+    }
+
+    window.onclick = function (event) {
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        if (!event.target.matches('.rounded-circle')) {
+            dropdownMenu.classList.remove('show');
+        }
+    };
+</script>
+
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .usuario {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(0, 0, 0);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 3;
+    }
+
+    .dropdown-content.show {
+        display: block;
+        min-width: 200px;
+        border-radius: 10px;
+        padding: 10%;
+        filter: drop-shadow(0 0 8px #7748CF);
+        right: 10%;
+        top: 110%;
+        transition: 0.3s ease-in-out
+        ;
+    }
+
+    .dropdown-item {
+        padding: 8px 12px;
+        text-decoration: none;
+        display: block;
+        color: rgba(255, 255, 255, 0.63);
+        background-color: black;
+        transition: 0.1s ease-in-out;
+        font-family: Arial, Helvetica, sans-serif;
+
+        &:hover {
+            border: 1px solid #7748CF;
+            background-color: rgb(152, 146, 146);
+            border-radius: 10px;
+            transition: 0.1s ease-in-out;
+        }
+    }
+
+    .dropdown-item:hover {
+        color: white;
+        background-color: #20074e;
+
+        & i {
+            color: #7748CF;
+            filter: drop-shadow(0 0 2px black);
+            margin-right: 1 2%;
+        }
+    }
+
+    .rounded-circle {
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .Sair {
+        width: 100%;
+        font-size: 14pt;
+        transition: 0.1s ease-in-out;
+        cursor: pointer;
+
+
+        &:hover {
+            background-color: #a50505;
+            transition: 0.1s ease-in-out;
+            & i:hover{
+                color: black;
+            }
+        }
+    }
+</style>

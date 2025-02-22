@@ -1,0 +1,122 @@
+@model List<AboutSongs.ViewModels.AlbumVM>
+@{
+    ViewData["Title"] = "Albuns";
+}
+
+@section Styles {
+    <!-- Links CSS/Font -->
+    <link rel="stylesheet" href="~/css/Styles/AbaMusicAlbum.css">
+    <link rel="stylesheet" href="~/css/Global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+}
+
+<section class="hidden filter">
+    <div class="filtering">
+        <button>Rap/Hip-Hop</button>
+        <button>Pop</button>
+        <button>Eletrônica</button>
+        <button>Rock</button>
+        <button>Funk</button>
+    </div>
+    <div class="search">
+        <div class="icon-search"></div>
+        <div class="input">
+            <input type="text" placeholder="Pesquise por." id="mysearch">
+        </div>
+        <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
+    </div>
+</section>
+
+<section class="hidden musicas">
+    <h1 class="title-s">Álbuns</h1>
+    <div class="cards" id="albums-container">
+        @await Html.PartialAsync("_AlbunsList", Model)
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        const icon = document.querySelector('.icon-search');
+        const search = document.querySelector('.search');
+        icon.onclick = function () {
+            search.classList.toggle('active')
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll('.filtering button');
+            const searchInput = document.getElementById('mysearch');
+            const albumsContainer = document.getElementById('albums-container');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const genre = button.textContent.trim();
+                    const termo = document.getElementById('mysearch').value.trim();
+                    fetchAlbuns({ genero: genre, termo: termo });
+                });
+            });
+
+            // Atualizar álbuns com pesquisa
+            searchInput.addEventListener('input', () => {
+                const termo = searchInput.value.trim();
+                fetchAlbuns({ termo: termo });
+            });
+
+            // Função para buscar álbuns
+            function fetchAlbuns(params) {
+                const url = new URL('/Home/BuscarAlbuns', window.location.origin);
+                Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Erro ao buscar álbuns: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
+                    .then(html => {
+                        albumsContainer.innerHTML = html;
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        albumsContainer.innerHTML = `<p class="error">Erro ao carregar os álbuns. Tente novamente mais tarde.</p>`;
+                    });
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll('.filtering button');
+            const albumsContainer = document.getElementById('albums-container');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const genre = button.textContent.trim(); // Obtém o texto do botão como gênero
+                    fetchAlbuns({ genero: genre });
+                });
+            });
+
+            function fetchAlbuns(params) {
+                const url = new URL('/Home/BuscarAlbuns', window.location.origin);
+                Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Erro ao buscar álbuns: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
+                    .then(html => {
+                        albumsContainer.innerHTML = html; // Atualiza o container dos álbuns
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        albumsContainer.innerHTML = `<p class="error">Erro ao carregar os álbuns. Tente novamente mais tarde.</p>`;
+                    });
+            }
+        });
+    </script>
+}

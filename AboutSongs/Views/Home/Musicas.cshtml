@@ -1,0 +1,86 @@
+@model List<AboutSongs.ViewModels.MusicaVM>
+@{
+    ViewData["Title"] = "Músicas";
+}
+
+@section Styles {
+    <!-- Links CSS/Font -->
+    <link rel="stylesheet" href="~/css/Styles/AbaMusicAlbum.css">
+    <link rel="stylesheet" href="~/css/Global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+}
+<section class="hidden filter">
+    <div class="filtering">
+        <button>Rap/Hip-Hop</button>
+        <button>Pop</button>
+        <button>Eletrônica</button>
+        <button>Rock</button>
+        <button>Funk</button>
+    </div>
+    <div class="search">
+        <div class="icon-search"></div>
+        <div class="input">
+            <input type="text" placeholder="Pesquise por." id="mysearch">
+        </div>
+        <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
+    </div>
+</section>
+
+<section class="hidden musicas">
+    <h1 class="title-s">Músicas</h1>
+    <div class="cards" id="musics-container">
+        @await Html.PartialAsync("_MusicasList", Model)
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        const icon = document.querySelector('.icon-search');
+        const search = document.querySelector('.search');
+        icon.onclick = function () {
+            search.classList.toggle('active')
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll('.filtering button');
+            const musicContainer = document.getElementById('musics-container');
+            const searchInput = document.getElementById('mysearch');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const genre = button.textContent.trim();
+                    const termo = searchInput.value.trim();
+                    fetchMusicas({ genero: genre, termo: termo });
+                });
+            });
+
+            searchInput.addEventListener('input', () => {
+                const termo = searchInput.value.trim();
+                fetchMusicas({ termo: termo });
+            });
+
+            function fetchMusicas(params) {
+                const url = new URL('/Home/BuscarMusicas', window.location.origin);
+                Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Erro ao buscar músicas: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
+                    .then(html => {
+                        musicContainer.innerHTML = html;
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        musicContainer.innerHTML = `<p class="error">Erro ao carregar as músicas. Tente novamente mais tarde.</p>`;
+                    });
+            }
+        });
+    </script>
+}
